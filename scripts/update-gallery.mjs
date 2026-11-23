@@ -5,19 +5,26 @@
 import fs from "node:fs/promises";
 import sharp from "sharp";
 
-const TOKEN = process.env.ICLOUD_ALBUM_TOKEN;
+// Accept either the bare token or the whole shared-album link.
+const TOKEN = (process.env.ICLOUD_ALBUM_TOKEN || "").trim().replace(/^.*#/, "").replace(/[;\s].*$/, "");
 if (!TOKEN) { console.error("ICLOUD_ALBUM_TOKEN is not set"); process.exit(1); }
+console.log(`token: ${TOKEN.length} chars`);
 const MAX_SIDE = 720;
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-let host = "p23-sharedstreams.icloud.com";
+// The album's server partition is encoded in the token (base62).
+const B62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const part = TOKEN[0] === "A" ? B62.indexOf(TOKEN[1]) : B62.indexOf(TOKEN[1]) * 62 + B62.indexOf(TOKEN[2]);
+let host = `p${String(part).padStart(2, "0")}-sharedstreams.icloud.com`;
 async function call(path, body) {
   for (let tries = 0; tries < 3; tries++) {
     const r = await fetch(`https://${host}/${TOKEN}/sharedstreams/${path}`, {
-      method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(body), redirect: "manual",
+      method: "POST",
+      headers: { "Content-Type": "text/plain", "Origin": "https://www.icloud.com", "Referer": "https://www.icloud.com/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" }, body: JSON.stringify(body), redirect: "manual",
     });
     if (r.status === 330) { host = (await r.json())["X-Apple-MMe-Host"] || r.headers.get("X-Apple-MMe-Host"); continue; }
-    if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+    if (!r.ok) throw new Error(`${path} on ${host}: HTTP ${r.status} ${(await r.text()).slice(0, 200)}`);
     return r.json();
   }
   throw new Error(`${path}: too many redirects`);
