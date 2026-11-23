@@ -41,7 +41,31 @@ const known = new Set([...(gallery.photos || []).map(p => p.guid), ...(gallery.e
 const ws = await call("webstream", { streamCtag: null });
 const fresh = (ws.photos || []).filter(p => !known.has(p.photoGuid) && (p.mediaAssetType || "photo") !== "video");
 console.log(`album: ${ws.photos?.length ?? 0} items, new photos: ${fresh.length}`);
-if (!fresh.length) process.exit(0);
+
+// Remove photos Izzy deleted from the album. Safety: skip if the album came back
+// empty or if more than half the gallery would disappear at once (likely an iCloud hiccup).
+const inAlbum = new Set((ws.photos || []).map(p => p.photoGuid));
+const gone = gallery.photos.filter(p => p.guid && !inAlbum.has(p.guid));
+let removed = 0;
+if (gone.length && inAlbum.size > 0 && gone.length <= gallery.photos.length / 2) {
+  for (const p of gone) {
+    await fs.rm(p.src, { force: true });
+    console.log("removed", p.src, p.date);
+  }
+  const goneSet = new Set(gone);
+  gallery.photos = gallery.photos.filter(p => !goneSet.has(p));
+  removed = gone.length;
+} else if (gone.length) {
+  console.warn(`skipped removing ${gone.length} photos (album returned ${inAlbum.size} items); check the album`);
+}
+console.log(`removed photos: ${removed}`);
+
+async function save() {
+  gallery.photos.sort((a, b) => (b.date || "0").localeCompare(a.date || "0"));
+  gallery.updated = new Date().toISOString().slice(0, 10);
+  await fs.writeFile(galleryPath, JSON.stringify(gallery));
+}
+if (!fresh.length) { if (removed) await save(); process.exit(0); }
 
 const items = {};
 for (let i = 0; i < fresh.length; i += 25) {
@@ -71,6 +95,4 @@ for (const p of fresh) {
   console.log("added", name, date);
 }
 
-gallery.photos.sort((a, b) => (b.date || "0").localeCompare(a.date || "0"));
-gallery.updated = new Date().toISOString().slice(0, 10);
-await fs.writeFile(galleryPath, JSON.stringify(gallery));
+await save();
