@@ -149,7 +149,7 @@ figure{margin:0}
 /* feed + sidebar */
 .feed-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(2rem,4vw,4rem);padding-block:clamp(2rem,5vw,3.5rem)}
 @media (max-width:900px){.feed-layout{grid-template-columns:1fr}}
-.feed{display:grid;gap:2.75rem;min-width:0}
+.feed{display:grid;gap:2.75rem;min-width:0;align-content:start}
 .post{display:grid;grid-template-columns:240px minmax(0,1fr);gap:1.5rem;align-items:start}
 .post .ph{aspect-ratio:4/3;min-height:0}
 .post .meta{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
@@ -297,7 +297,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <a class="press" href="https://www.instagram.com/theannemccloy/reel/DfQi1JFhjap/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
       <span class="eyebrow">As seen on</span><b>NEWS10 · Upstate Living</b><span style="color:var(--muted)">Special Guest, November 2026 · Watch the segment →</span>
     </a>
-    <div class="strip"><span>Team sessions</span><b>UAlbany Soccer</b><b>Tamarac Girls Soccer</b><span>Teaching at</span><b>Best Fitness · Central Ave</b></div>
+    <div class="strip"><span>Teaching at</span><b>Best Fitness · Central Ave</b></div>
   </div>
 
   <div class="wrap feed-layout">
@@ -324,15 +324,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         </div>
       </article>
 
-      <article class="post">
-        <figure class="ph"><span class="cap">Team yoga session on the field</span></figure>
-        <div class="body">
-          <div class="meta"><span>Teams</span><span>·</span><span>Recovery &amp; mobility</span></div>
-          <h3><a href="#teams">Back home at Tamarac: restorative yoga on the beach</a></h3>
-          <p>I played for Tamarac, and this fall I came back as Coach Izzy to lead the girls' soccer team through a recovery session. Here's what a team session looks like and how coaches can book one.</p>
-          <a href="#teams">Book a team session</a>
-        </div>
-      </article>
+      
 
       <article class="post">
         <figure class="ph photo "><img src="img/run15k.jpg" alt="Izzy running the Stockadeathon 15k in Schenectady" loading="lazy"></figure>
@@ -457,7 +449,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <li><b>Portland, Maine</b><span>Five years in the city I still call my second home. I find yoga at Portland Yoga Collective and start leading every kind of class I can: HIIT, yoga, Pilates, soccer clinics, personal training.</span></li>
       <li><b>Orangetheory</b><span>Head Coach at Orangetheory Niskayuna. I hit my 1,000th coached class in June 2025, and co-led a packed Flexibility &amp; Mobility Workshop in January 2026.</span></li>
       <li><b>October 2025</b><span>After missing the first marathon I ever trained for, I finish the Maine Marathon in Portland, a year after running the half on the same course.</span></li>
-      <li><b>Albany</b><span>Eleven classes a week and one-on-one coaching at Best Fitness on Central Ave, team sessions with UAlbany soccer and my old Tamarac team, and a Special Guest spot on NEWS10's Upstate Living.</span></li>
+      <li><b>Albany</b><span>Eleven classes a week and one-on-one coaching at Best Fitness on Central Ave, and a Special Guest spot on NEWS10's Upstate Living.</span></li>
     </ol>
     <div class="quote" style="margin-top:2rem"><p>"Through injuries, comebacks, reps, and miles, I've built more than just strength. I've built trust in myself."</p><small>Izzy, on Instagram</small></div>
     <p class="preview-note" style="margin-top:1rem">Pieced together from Izzy's newsletter and Instagram. Izzy can add years and adjust the wording.</p>
@@ -555,7 +547,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
   <div class="wrap section"><h2 style="margin-bottom:1.2rem">Kind words</h2><div class="quotes">
     <div class="quote"><p>"She brings a vibe that keeps fitness and nutrition clients showing up."</p><small>NEWS10 Upstate Living, on Izzy helping co-host Anne McCloy get back in shape after twins</small></div>
-    <div class="quote"><p>"Her positive words and willingness to share her own experiences left us feeling refreshed, connected, and empowered."</p><small>Tamarac Girls Soccer</small></div>
     <div class="quote"><p>Six weeks. Four sessions a week. Locked-in nutrition. A BLean Challenge win.</p><small>Josh, BLean Challenge winner</small></div>
   </div></div>
 </section>
@@ -910,7 +901,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   [3,2,0,1].forEach(i=>story.appendChild(el("p",null,esc(i===0?POST[0].replace(/^Hi there.*?you're here\. /,""):POST[i]))));
   story.insertAdjacentHTML("afterbegin","<h3 style='margin-bottom:.3rem'>Where it started</h3>");
   story.insertAdjacentHTML("beforeend","<p class='pull' style='font-size:1.6rem'>Through injuries, comebacks, reps, and miles, I've built more than just strength. I've built trust in myself. What a gift it is to be a Coach.</p>");
-  story.insertAdjacentHTML("beforeend","<p>Today you'll find me on the mat and the gym floor at Best Fitness on Central Ave, on the field with teams like UAlbany soccer and Tamarac, and out on the roads with whoever wants to run. I fell in love with yoga at Portland Yoga Collective, finished the Maine Marathon in 2025 on two rebuilt knees, and I'm still chasing the same thing: more community, more balance, and more people showing up as their best selves.</p>");
+  story.insertAdjacentHTML("beforeend","<p>Today you'll find me on the mat and the gym floor at Best Fitness on Central Ave, and out on the roads with whoever wants to run. I fell in love with yoga at Portland Yoga Collective, finished the Maine Marathon in 2025 on two rebuilt knees, and I'm still chasing the same thing: more community, more balance, and more people showing up as their best selves.</p>");
 
   // ---------- Newsletter: hand off to Substack with email prefilled ----------
   const SUBSTACK="https://izzyinmotion.substack.com/subscribe";
