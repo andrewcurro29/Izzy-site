@@ -5,9 +5,13 @@
 import fs from "node:fs/promises";
 import sharp from "sharp";
 
-// Accept either the bare token or the whole shared-album link.
-const TOKEN = (process.env.ICLOUD_ALBUM_TOKEN || "").trim().replace(/^.*#/, "").replace(/[;\s].*$/, "");
-if (!TOKEN) { console.error("ICLOUD_ALBUM_TOKEN is not set"); process.exit(1); }
+// Accept either the bare token or the whole shared-album link (pasted with any extra text).
+const RAW = process.env.ICLOUD_ALBUM_TOKEN || "";
+const TOKEN = (RAW.split("#").pop().match(/[A-Za-z0-9_-]{15,}/g) || RAW.match(/[A-Za-z0-9_-]{15,}/g) || []).sort((a, b) => b.length - a.length)[0] || "";
+if (!TOKEN) {
+  console.error(`Couldn't find an album token in ICLOUD_ALBUM_TOKEN (length ${RAW.length}, has '#': ${RAW.includes("#")}, has 'http': ${RAW.includes("http")})`);
+  process.exit(1);
+}
 console.log(`token: ${TOKEN.length} chars`);
 const MAX_SIDE = 720;
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
