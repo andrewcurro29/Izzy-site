@@ -68,11 +68,12 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .brand b{font-family:var(--f-display);font-weight:500;font-size:1.75rem;letter-spacing:.01em}
 .brand span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
 nav.main{display:flex;gap:1.4rem;align-items:center}
+@media (max-width:1320px){nav.main{gap:1.05rem}}
 nav.main a{color:var(--ink);text-decoration:none;font-size:.92rem;letter-spacing:.03em;padding-block:.3rem;border-bottom:1px solid transparent}
 nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:var(--ink)}
 nav.main .btn{color:var(--on-moss);border-bottom:1px solid var(--moss)}
 .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:.45rem .95rem;font:inherit;font-size:.9rem;color:var(--ink);cursor:pointer}
-@media (max-width:980px){
+@media (max-width:1180px){
   .menu-btn{display:inline-block}
   nav.main{position:absolute;left:0;right:0;top:100%;background:var(--cream);flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line);padding:0 max(16px,env(safe-area-inset-right,0px)) 1rem max(16px,env(safe-area-inset-left,0px));display:none}
   nav.main.open{display:flex}
@@ -224,7 +225,8 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .timeline li{display:grid;grid-template-columns:120px 1fr;gap:1.2rem;padding:1.1rem 0;border-top:1px solid var(--line)}
 .timeline li b{font-family:var(--f-display);font-size:1.25rem;font-weight:500}
 .timeline li span{color:var(--muted);font-weight:300}
-@media (max-width:520px){.timeline li{grid-template-columns:1fr;gap:.2rem}}
+.timeline.steps li{grid-template-columns:190px 1fr}
+@media (max-width:520px){.timeline li,.timeline.steps li{grid-template-columns:1fr;gap:.2rem}}
 
 /* schedule */
 .sched-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
@@ -263,6 +265,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <a href="#journal">Journal</a>
       <a href="#classes">Classes</a>
       <a href="#coaching">Coaching</a>
+      <a href="#nutrition">Nutrition</a>
       <a href="#teams">Teams</a>
       <a href="#retreats">Retreats</a>
       <a href="#runs">Run Club</a>
@@ -281,7 +284,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div class="copy">
       <span class="eyebrow">NASM CPT · AFAA group fitness · 200-hour yoga teacher · Albany, NY</span>
       <h1>Stronger together, <em>one class at a time.</em></h1>
-      <p class="lede">I'm Izzy. Four ways to move, more than a dozen classes a week: yoga, Pilates, Body Tone and BFitt:60 at Best Fitness on Central Ave. I also coach one-on-one, lead team sessions and run with anyone who wants to join.</p>
+      <p class="lede">I'm Izzy. Four ways to move, more than a dozen classes a week: yoga, Pilates, Body Tone and BFitt:60 at Best Fitness on Central Ave. I also offer one-on-one training and <a href="#nutrition">nutrition coaching</a>, lead team sessions and run with anyone who wants to join.</p>
       <div class="actions">
         <a class="btn" href="#coaching">Work with me</a>
         <a class="btn ghost" href="#classes">See my classes</a>
@@ -515,7 +518,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div style="display:grid;gap:1.5rem">
       <div class="offer"><span class="eyebrow">1:1</span><h3>Personal training</h3><ul><li>Strength, mobility and functional training</li><li>Return-to-sport and post-rehab progressions</li><li>Race and event preparation</li></ul></div>
       <div class="offer"><span class="eyebrow">6 weeks</span><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep. Last round's winner, Josh, trained four times a week, mixed personal training with classes and stayed locked in on nutrition from start to finish.</p></div>
-      <div class="offer"><span class="eyebrow">Habits</span><h3>Nutrition coaching</h3><ul><li>Sustainable eating habits, no crash diets</li><li>Fueling for training and recovery</li><li>Weekly check-ins and accountability</li></ul></div>
+      <div class="offer"><span class="eyebrow">Habits</span><h3>Nutrition coaching</h3><ul><li>Sustainable eating habits, no crash diets</li><li>Fueling for training and recovery</li><li>Weekly check-ins and accountability</li></ul><a href="#nutrition">How nutrition coaching works →</a></div>
       <figure class="ph photo wide top"><img src="img/coaching.webp" alt="Izzy front-racking a barbell" loading="lazy"></figure>
     </div>
     <form class="form" id="coachForm" data-form="coaching">
@@ -550,6 +553,47 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div class="quote"><p>"She brings a vibe that keeps fitness and nutrition clients showing up."</p><small>NEWS10 Upstate Living, on Izzy helping co-host Anne McCloy get back in shape after twins</small></div>
     <div class="quote"><p>Six weeks. Four sessions a week. Locked-in nutrition. A BLean Challenge win.</p><small>Josh, BLean Challenge winner</small></div>
   </div></div>
+</section>
+
+<!-- ================= NUTRITION ================= -->
+<section data-view="nutrition">
+  <div class="wrap page-head">
+    <span class="eyebrow">Nutrition coaching</span>
+    <h1>Eat for the life you're training for</h1>
+    <p class="lede">No crash diets and no foods you're never allowed to eat again. Together we build simple habits that fuel your workouts, your recovery and your busy days, and that still work long after we're done.</p>
+  </div>
+  <div class="wrap section split" style="padding-top:0">
+    <div style="display:grid;gap:1.5rem">
+      <div class="cards" style="grid-template-columns:1fr">
+        <div class="offer"><span class="eyebrow">Food first</span><h3>Habits over rules</h3><p style="color:var(--muted);font-weight:300">We start with what you already eat and change a few things at a time: protein at every meal, more color on the plate, a plan for busy weeknights.</p></div>
+        <div class="offer"><span class="eyebrow">Performance</span><h3>Fuel for how you move</h3><ul><li>Fuel before you train or play</li><li>Refuel after workouts, games and long runs</li><li>Hydrate, hydrate, hydrate</li><li>Race-week and race-day fueling</li></ul></div>
+        <div class="offer"><span class="eyebrow">Accountability</span><h3>Someone in your corner</h3><p style="color:var(--muted);font-weight:300">Regular check-ins to see what's working, adjust what isn't, and keep you consistent when life gets busy.</p></div>
+      </div>
+    </div>
+    <div style="display:grid;gap:1.5rem;align-content:start">
+      <figure class="ph photo tall"><img src="img/nutrition.webp" alt="A bowl of homemade soup topped with arugula and shaved parmesan" loading="lazy"></figure>
+      <div class="quote"><p>"She brings a vibe that keeps fitness and nutrition clients showing up."</p><small>NEWS10 Upstate Living</small></div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <h2 style="margin-bottom:1.2rem">How it works</h2>
+    <ol class="timeline steps">
+      <li><b>1. Free intro chat</b><span>Tell me about your goals, your schedule and how you eat now. No judgment, just a starting point.</span></li>
+      <li><b>2. Your starting point</b><span>A few days of simple food notes (photos count) so we can see your real patterns.</span></li>
+      <li><b>3. Your plan</b><span>Two or three habits to focus on first, built around your training, your work and the foods you actually like.</span></li>
+      <li><b>4. Check-ins</b><span>We review, adjust and add the next habit. In person at Best Fitness, by phone or by message.</span></li>
+    </ol>
+  </div>
+  <div class="wrap section">
+    <h2 style="margin-bottom:1.2rem">Ways to work together</h2>
+    <div class="cards">
+      <div class="offer"><span class="eyebrow">1:1</span><h3>Nutrition coaching</h3><p style="color:var(--muted);font-weight:300">Personal habit coaching with regular check-ins. Great for busy professionals, runners and anyone tired of starting over every Monday.</p><a class="btn small" href="#coaching" data-pick="Nutrition coaching">Check availability</a></div>
+      <div class="offer"><span class="eyebrow">Best of both</span><h3>Training + nutrition</h3><p style="color:var(--muted);font-weight:300">Pair personal training at Best Fitness with nutrition coaching, so what you do in the gym and in the kitchen work together.</p><a class="btn small" href="#coaching" data-pick="Both">Check availability</a></div>
+      <div class="offer"><span class="eyebrow">6 weeks</span><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week challenge to learn your nutrition, work with a coach and build habits you keep. "Six weeks to learn it. A lifetime to use it."</p><a class="btn small" href="#coaching" data-pick="BLean Challenge">Ask about the next round</a></div>
+    </div>
+    <p class="note" style="margin-top:1.4rem;color:var(--muted);font-weight:300">Nutrition coaching focuses on everyday habits and fueling for performance. It isn't medical nutrition therapy. If you have a medical condition, an eating disorder history or are pregnant, I'm happy to work alongside your doctor or a registered dietitian.</p>
+    <p class="preview-note" style="margin-top:.8rem">Placeholder details for Izzy to confirm: session length and how often check-ins happen, in person vs. virtual, pricing or packages, whether non-members can sign up, any nutrition certification to list, and a client story she'd like to share.</p>
+  </div>
 </section>
 
 <!-- ================= TEAMS ================= -->
@@ -746,7 +790,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <p style="font-size:.8rem">Content on this site is for general education and isn't medical advice. Check with your doctor before starting a new program. As an Amazon Associate I earn from qualifying purchases; some product links on this site are affiliate links.</p>
     </div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Explore</h4>
-      <ul><li><a href="#story">My Story</a></li><li><a href="#journal">Journal</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+      <ul><li><a href="#story">My Story</a></li><li><a href="#journal">Journal</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Follow</h4>
       <ul class="social-list" id="socialFoot"></ul></div>
   </div>
@@ -968,9 +1012,10 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     nav.querySelectorAll("a").forEach(a=>{ if(a.getAttribute("href")==="#"+n) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
     nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); if(!lb.hidden) lb.hidden=true;
     window.scrollTo(0,0);
-    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",journal:"Journal · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
+    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",journal:"Journal · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
+  document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; }));
   menuBtn.addEventListener("click",()=>{ const o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",String(o)); });
   window.addEventListener("hashchange",show);
   show();
