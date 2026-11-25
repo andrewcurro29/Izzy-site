@@ -249,6 +249,7 @@ footer.site a:hover{text-decoration:underline}
 footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 @media (max-width:700px){footer.site .wrap{grid-template-columns:1fr}}
 .preview-note{font-size:.78rem;color:var(--muted)}
+#made .product .ph{aspect-ratio:4/3;min-height:0;height:auto}
 </style>
 
 
@@ -381,6 +382,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <section style="display:grid;gap:.7rem;padding:1.1rem 1.4rem;background:var(--sage-soft);border-radius:var(--radius)">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap"><span class="eyebrow">Izzy's picks</span><a href="#shop" style="font-size:.9rem">Shop all →</a></div>
         <div id="homePicks" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+        <a href="#shop" style="font-size:.9rem">Made by Izzy: art, merch &amp; essential oils →</a>
         <p class="preview-note" style="margin:0">As an Amazon Associate I earn from qualifying purchases.</p>
       </section>
     </aside>
@@ -726,9 +728,30 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap page-head">
     <span class="eyebrow">Shop</span>
     <h1>Art, gear &amp; everyday wellness</h1>
-    <p class="lede">The gear I use for training, running and recovery, plus original artwork and prints coming soon.</p>
+    <p class="lede">Things I make myself, from artwork to merch to essential oil blends, plus the gear I use for training, running and recovery.</p>
   </div>
   <div class="wrap" style="display:grid;gap:3rem;padding-bottom:3rem">
+    <section id="made" style="display:grid;gap:2rem" aria-labelledby="madeHead">
+      <div style="display:grid;gap:.5rem">
+        <span class="eyebrow">Made by Izzy</span>
+        <h2 id="madeHead">Handmade, small batch</h2>
+        <p style="color:var(--muted);font-weight:300;max-width:62ch">Original art, Izzy in Motion merch and wellness blends I make myself. Tap Notify me on anything you'd like, or join the list below to hear when each drop is ready.</p>
+      </div>
+      <div><h3 style="margin-bottom:1rem">Artwork</h3><div class="cards" id="shopArt"></div></div>
+      <div><h3 style="margin-bottom:1rem">Merch</h3><div class="cards" id="shopMerch"></div></div>
+      <div><h3 style="margin-bottom:1rem">Wellness &amp; essential oils</h3><div class="cards" id="shopOils"></div></div>
+      <form class="form" data-form="shop" id="shopForm" style="max-width:640px">
+        <h3>Get first dibs</h3>
+        <div class="row"><label>Name<input id="s-name" required autocomplete="name"></label><label>Email<input id="s-email" type="email" required autocomplete="email"></label></div>
+        <fieldset><legend>What are you interested in?</legend><div class="checks">
+          <label><input type="checkbox" id="s-1"> Art &amp; prints</label>
+          <label><input type="checkbox" id="s-2"> Merch</label>
+          <label><input type="checkbox" id="s-3"> Essential oils &amp; wellness</label>
+        </div></fieldset>
+        <button class="btn" type="submit">Keep me posted</button>
+      </form>
+      <p class="preview-note" style="margin:0">Essential oil blends are for aromatherapy and general wellness only. They aren't intended to diagnose, treat, cure or prevent any disease.</p>
+    </section>
     <section style="display:grid;gap:1.2rem" aria-labelledby="picksHead">
       <div style="display:grid;gap:.5rem">
         <h2 id="picksHead">Izzy's picks</h2>
@@ -738,9 +761,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <div class="picks" id="picksGrid"></div>
       <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. As an Amazon Associate I earn from qualifying purchases, and I may earn a small commission from other retailers, at no extra cost to you. I only recommend products I use or would hand to a client.</p>
     </section>
-    <div><h2 style="margin-bottom:1.2rem">Artwork</h2><div class="cards" id="shopArt"></div></div>
-    <div><h2 style="margin-bottom:1.2rem">Wellness &amp; essential oils</h2><div class="cards" id="shopOils"></div></div>
-    <p class="preview-note">Picks are a starting list for Izzy to edit. Links search Amazon with a placeholder tracking tag until her Associates account is approved; swap in exact products and her real tag then. Artwork and oils are placeholders.</p>
+    <p class="preview-note">Picks are a starting list for Izzy to edit. Links search Amazon with a placeholder tracking tag until her Associates account is approved; swap in exact products and her real tag then. Made by Izzy items are placeholders until she has photos, prices and a way to check out (for example Shopify, Etsy or Square).</p>
   </div>
 </section>
 
@@ -814,6 +835,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
   const SHOP = {
     shopArt:[{t:"Original painting",p:"One of a kind",c:"Artwork piece"},{t:"Art print",p:"Limited run",c:"Framed print"},{t:"Greeting cards",p:"Set of 6",c:"Card set"}],
+    shopMerch:[{t:"Izzy in Motion tee",p:"Coming soon",c:"T-shirt"},{t:"Run club hat",p:"Coming soon",c:"Hat"},{t:"Water bottle",p:"Coming soon",c:"Bottle"}],
     shopOils:[{t:"Post-workout blend",p:"Coming soon",c:"Oil bottle"},{t:"Calm & sleep blend",p:"Coming soon",c:"Diffuser"},{t:"Starter kit",p:"Coming soon",c:"Kit"}]
   };
 
@@ -958,7 +980,8 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     coaching:["Thanks! Your inquiry is in.","Izzy will reply with her current openings, usually within two days."],
     teams:["Thanks, coach!","Izzy will be in touch about dates, focus and pricing for your team."],
     retreats:["You're on the retreat list.","You'll hear first when dates and location are set."],
-    runs:["Welcome to run club!","You'll get the next group run details by email."]
+    runs:["Welcome to run club!","You'll get the next group run details by email."],
+    shop:["You're on the list!","You'll hear first when new art, merch and blends are ready."]
   };
   document.querySelectorAll("form[data-form]").forEach(f=>{
     f.addEventListener("submit",e=>{
