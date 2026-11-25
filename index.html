@@ -1,6 +1,15 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>[hidden]{display:none!important}</style></head><body><meta name="robots" content="noindex, nofollow">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>[hidden]{display:none!important}</style><meta name="robots" content="noindex, nofollow">
 <title>Izzy Bisceglia</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Izzy Bisceglia · Performance &amp; Wellness">
+<meta property="og:description" content="Yoga, Pilates, strength classes, personal training and nutrition coaching through Best Fitness in Albany, NY.">
+<meta property="og:image" content="https://andrewcurro29.github.io/Izzy-site/img/share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://andrewcurro29.github.io/Izzy-site/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="description" content="Izzy Bisceglia: personal trainer, yoga and Pilates instructor, and nutrition coach in Albany, NY.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +81,17 @@ nav.main{display:flex;gap:1.4rem;align-items:center}
 nav.main a{color:var(--ink);text-decoration:none;font-size:.92rem;letter-spacing:.03em;padding-block:.3rem;border-bottom:1px solid transparent}
 nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:var(--ink)}
 nav.main .btn{color:var(--on-moss);border-bottom:1px solid var(--moss)}
+.dd{position:relative}
+.dd-btn{background:none;border:0;font:inherit;font-size:.92rem;letter-spacing:.03em;color:var(--ink);cursor:pointer;padding:.3rem 0;display:inline-flex;align-items:center;gap:.35rem}
+.dd-btn::after{content:"";width:.4em;height:.4em;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-25%) rotate(45deg)}
+.dd-btn.here{border-bottom:1px solid var(--ink)}
+.dd-menu{display:none;position:absolute;top:100%;left:-1rem;padding-top:.6rem;z-index:60}
+.dd-menu::before{content:"";position:absolute;inset:.6rem 0 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(29,32,27,.08);z-index:-1}
+.dd-menu a{display:block;white-space:nowrap;padding:.55rem 1.1rem;border-bottom:0!important}
+.dd-menu a:first-child{margin-top:.4rem}.dd-menu a:last-child{margin-bottom:.4rem}
+.dd-menu a:hover,.dd-menu a[aria-current="page"]{color:var(--moss);text-decoration:underline}
+@media (hover:hover){.dd:hover .dd-menu{display:block}}
+.dd.open .dd-menu{display:block}
 .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:.45rem .95rem;font:inherit;font-size:.9rem;color:var(--ink);cursor:pointer}
 @media (max-width:1180px){
   .menu-btn{display:inline-block}
@@ -79,6 +99,11 @@ nav.main .btn{color:var(--on-moss);border-bottom:1px solid var(--moss)}
   nav.main.open{display:flex}
   nav.main a{padding:.8rem 0;border-bottom:1px solid var(--line)}
   nav.main .btn{margin-top:1rem;justify-content:center}
+  .dd-btn{padding:1rem 0 .3rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);cursor:default}
+  .dd-btn::after{display:none}
+  .dd-menu,.dd:hover .dd-menu{display:block;position:static;padding:0}
+  .dd-menu::before{display:none}
+  .dd-menu a{padding:.8rem 0 .8rem 1rem!important;border-bottom:1px solid var(--line)!important;margin:0!important}
 }
 
 /* photo placeholders */
@@ -259,15 +284,13 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
     <nav class="main" id="mainNav" aria-label="Main">
       <a href="#story">My Story</a>
+      <div class="dd"><button type="button" class="dd-btn" aria-expanded="false">Work with me</button>
+        <div class="dd-menu"><a href="#coaching">Personal training</a><a href="#nutrition">Nutrition coaching</a><a href="#teams">Team sessions</a></div></div>
+      <div class="dd"><button type="button" class="dd-btn" aria-expanded="false">Classes &amp; events</button>
+        <div class="dd-menu"><a href="#classes">Weekly classes</a><a href="#runs">Run club</a><a href="#retreats">Retreats</a></div></div>
       <a href="#newsletter">Newsletter</a>
-      <a href="#classes">Classes</a>
-      <a href="#coaching">Coaching</a>
-      <a href="#nutrition">Nutrition</a>
-      <a href="#teams">Teams</a>
-      <a href="#retreats">Retreats</a>
-      <a href="#runs">Run Club</a>
       <a href="#shop">Shop</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
       <a class="btn small" href="#newsletter">Subscribe</a>
     </nav>
   </div>
@@ -283,7 +306,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <h1>Stronger together, <em>one class at a time.</em></h1>
       <p class="lede">I'm Izzy. Four ways to move, more than a dozen classes a week: yoga, Pilates, Body Tone and BFitt:60 at Best Fitness on Central Ave. I also offer one-on-one training and nutrition coaching through Best Fitness, lead team sessions and run with anyone who wants to join.</p>
       <div class="actions">
-        <a class="btn" href="#coaching">Work with me</a>
+        <a class="btn" href="#coaching" data-consult>Book a free consult</a>
         <a class="btn ghost" href="#classes">See my classes</a>
       </div>
     </div>
@@ -450,7 +473,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <li><b>Albany</b><span>Eleven classes a week and one-on-one coaching at Best Fitness on Central Ave, and a Special Guest spot on NEWS10's Upstate Living.</span></li>
     </ol>
     <div class="quote" style="margin-top:2rem"><p>"Through injuries, comebacks, reps, and miles, I've built more than just strength. I've built trust in myself."</p><small>Izzy, on Instagram</small></div>
-    <p class="preview-note" style="margin-top:1rem">Pieced together from Izzy's newsletter and Instagram. Izzy can add years and adjust the wording.</p>
   </div>
   <div class="wrap section"><div class="cards">
     <div class="offer"><span class="eyebrow">Certifications</span><h4>Trained to coach every body</h4><ul><li>NASM Certified Personal Trainer</li><li>NASM Women's Fitness Specialist</li><li>AFAA Group Fitness Instructor</li><li>Pilates</li><li>Nutrition coaching</li></ul></div>
@@ -472,7 +494,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap" style="padding-bottom:3rem">
     <div class="feed-head" style="margin-bottom:1.2rem"><h2>Recent letters</h2></div>
     <div class="cards" id="journalCards"></div>
-    <p class="preview-note" style="margin-top:1.5rem">Only the welcome post is live so far. The other cards are topics from the welcome letter, ready to swap for real posts as they're published. Once the site is hosted, this list can pull from the Substack RSS feed automatically.</p>
   </div>
 </section>
 
@@ -515,14 +536,14 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
   <div class="wrap section split" style="padding-top:0">
     <div style="display:grid;gap:1.5rem">
-      <div class="offer" style="background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> All personal training, programming and nutrition coaching with Izzy is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></div>
+      <div class="offer" style="background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> All personal training, programming and nutrition coaching with me is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></div>
       <div class="offer"><span class="eyebrow">1:1</span><h3>Personal training</h3><ul><li>Strength, mobility and functional training</li><li>Return-to-sport and post-rehab progressions</li><li>Race and event preparation</li></ul></div>
       <div class="offer"><span class="eyebrow">6 weeks</span><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep. Last round's winner, Josh, trained four times a week, mixed personal training with classes and stayed locked in on nutrition from start to finish.</p></div>
       <div class="offer"><span class="eyebrow">Habits</span><h3>Nutrition coaching</h3><ul><li>Sustainable eating habits, no crash diets</li><li>Fueling for training and recovery</li><li>Weekly check-ins and accountability</li></ul><a href="#nutrition">How nutrition coaching works →</a></div>
       <figure class="ph photo wide top"><img src="img/coaching.webp" alt="Izzy front-racking a barbell" loading="lazy"></figure>
     </div>
     <form class="form" id="coachForm" data-form="coaching">
-      <h3>Check my availability</h3>
+      <h3 id="consultHead">Book a free consult</h3>
       <div class="row">
         <label>Name<input id="c-name" required autocomplete="name"></label>
         <label>Email<input id="c-email" type="email" required autocomplete="email"></label>
@@ -546,7 +567,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       </label>
       <label>Tell me about your goals and any injuries<textarea id="c-goals" placeholder="e.g. Coming back from a knee injury and want to run a half marathon in the spring."></textarea></label>
       <button class="btn" type="submit">Send my inquiry</button>
-      <p class="note">Izzy replies personally, usually within two days. Or DM "TRAIN" on Instagram. Training and nutrition coaching are booked and billed through Best Fitness.</p>
+      <p class="note">I reply personally, usually within two days. Or DM "TRAIN" on <a href="https://ig.me/m/_izzyinmotion_" target="_blank" rel="noopener">Instagram</a>. Training and nutrition coaching are booked and billed through Best Fitness.</p>
     </form>
   </div>
   <div class="wrap section"><h2 style="margin-bottom:1.2rem">Kind words</h2><div class="quotes">
@@ -560,7 +581,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap page-head">
     <span class="eyebrow">Nutrition coaching</span>
     <h1>Eat for the life you're training for</h1>
-    <p class="lede">Nutrition coaching with Izzy is offered through Best Fitness, Central Ave. No crash diets and no foods you're never allowed to eat again. Together we build simple habits that fuel your workouts, your recovery and your busy days, and that still work long after we're done.</p>
+    <p class="lede">Nutrition coaching with me is offered through Best Fitness, Central Ave. No crash diets and no foods you're never allowed to eat again. Together we build simple habits that fuel your workouts, your recovery and your busy days, and that still work long after we're done.</p>
   </div>
   <div class="wrap section split" style="padding-top:0">
     <div style="display:grid;gap:1.5rem">
@@ -591,9 +612,8 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <div class="offer"><span class="eyebrow">Best of both</span><h3>Training + nutrition</h3><p style="color:var(--muted);font-weight:300">Pair personal training and nutrition coaching, both through Best Fitness, so what you do in the gym and in the kitchen work together.</p><a class="btn small" href="#coaching" data-pick="Both">Check availability</a></div>
       <div class="offer"><span class="eyebrow">6 weeks</span><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week challenge to learn your nutrition, work with a coach and build habits you keep. "Six weeks to learn it. A lifetime to use it."</p><a class="btn small" href="#coaching" data-pick="BLean Challenge">Ask about the next round</a></div>
     </div>
-    <div class="offer" style="margin-top:1.4rem;background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> All personal training, programming and nutrition coaching with Izzy is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></div>
+    <div class="offer" style="margin-top:1.4rem;background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> All personal training, programming and nutrition coaching with me is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></div>
     <p class="note" style="margin-top:1.4rem;color:var(--muted);font-weight:300">Nutrition coaching focuses on everyday habits and fueling for performance. It isn't medical nutrition therapy. If you have a medical condition, an eating disorder history or are pregnant, I'm happy to work alongside your doctor or a registered dietitian.</p>
-    <p class="preview-note" style="margin-top:.8rem">Placeholder details for Izzy to confirm with Best Fitness: session length and how often check-ins happen, in person vs. virtual, how packages are priced, whether non-members can sign up, any nutrition certification to list, and a client story she'd like to share.</p>
   </div>
 </section>
 
@@ -611,7 +631,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <figure class="ph"><span class="cap">Fueling talk</span></figure>
     <figure class="ph"><span class="cap">Group photo</span></figure>
   </div>
-  <p class="preview-note" style="margin-top:.8rem">Team photos feature students, so these stay as placeholders until Izzy picks shots the programs are happy to share. See the <a href="https://www.instagram.com/bestfitnessclubs/reel/DbYKcy9NWPN/" target="_blank" rel="noopener">UAlbany hot yoga session</a>, the <a href="https://www.instagram.com/_izzyinmotion_/p/DObS2aPjbZS/" target="_blank" rel="noopener">Tamarac training session</a> and the <a href="https://www.instagram.com/tamarac_girlssoccer/p/DdMA1J2kfyc/" target="_blank" rel="noopener">Tamarac beach session</a> on Instagram.</p></div>
+  <p style="margin-top:.8rem;color:var(--muted);font-weight:300">See more on Instagram: the <a href="https://www.instagram.com/bestfitnessclubs/reel/DbYKcy9NWPN/" target="_blank" rel="noopener">UAlbany hot yoga session</a>, the <a href="https://www.instagram.com/_izzyinmotion_/p/DObS2aPjbZS/" target="_blank" rel="noopener">Tamarac training session</a> and the <a href="https://www.instagram.com/tamarac_girlssoccer/p/DdMA1J2kfyc/" target="_blank" rel="noopener">Tamarac beach session</a> on Instagram.</p></div>
   <div class="wrap section split">
     <div style="display:grid;gap:1.4rem">
       <div class="cards" style="grid-template-columns:1fr">
@@ -621,8 +641,8 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <div class="offer"><h4>Focus &amp; breathwork</h4><p style="color:var(--muted);font-weight:300">Simple breathing tools athletes can use before a penalty kick, a free throw or a big test.</p></div>
       </div>
       <div class="quote"><p>"Her positive words and willingness to share her own experiences left us feeling refreshed, connected, and empowered."</p><small>Tamarac Girls Soccer, September 2026</small></div>
-      <div class="offer" style="background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> Team sessions with Izzy are provided through Best Fitness, 911 Central Ave, Albany, and are booked and billed through Best Fitness. Coaches can also DM @bestfitnessclubs "SPORTS".</p></div>
-      <p class="preview-note">Session length, location and pricing are set with Best Fitness. Izzy can confirm the details to list here.</p>
+      <div class="offer" style="background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> Team sessions with me are provided through Best Fitness, 911 Central Ave, Albany, and are booked and billed through Best Fitness. Coaches can also DM @bestfitnessclubs "SPORTS".</p></div>
+      <p class="preview-note">Session length, location and pricing are set through Best Fitness. Ask in the form and I'll send details.</p>
     </div>
     <form class="form" id="teamForm" data-form="teams">
       <h3>Request a team session</h3>
@@ -708,7 +728,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div style="display:grid;gap:1rem">
       <h2>Upcoming</h2>
       <div id="runList" style="display:grid;gap:.8rem"></div>
-      <p class="preview-note">The Turkey Trot is real. The group runs after it are examples until run club dates are set.</p>
     </div>
     <div style="display:grid;gap:1.2rem;align-content:start">
       <div class="offer">
@@ -758,14 +777,13 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     </section>
     <section style="display:grid;gap:1.2rem" aria-labelledby="picksHead">
       <div style="display:grid;gap:.5rem">
-        <h2 id="picksHead">Izzy's picks</h2>
+        <h2 id="picksHead">My picks</h2>
         <p style="color:var(--muted);font-weight:300;max-width:62ch">The gear I actually use and recommend to clients, from my yoga mat to my race-day vest.</p>
       </div>
       <div class="chips" id="pickFilters" role="group" aria-label="Filter picks"></div>
       <div class="picks" id="picksGrid"></div>
       <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. As an Amazon Associate I earn from qualifying purchases, and I may earn a small commission from other retailers, at no extra cost to you. I only recommend products I use or would hand to a client.</p>
     </section>
-    <p class="preview-note">Picks are a starting list for Izzy to edit. Links search Amazon with a placeholder tracking tag until her Associates account is approved; swap in exact products and her real tag then. Made by Izzy items are placeholders until she has photos, prices and a way to check out (for example Shopify, Etsy or Square).</p>
   </div>
 </section>
 
@@ -788,6 +806,28 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
+<section data-view="contact">
+  <div class="wrap page-head">
+    <span class="eyebrow">Contact</span>
+    <h1>Say hello</h1>
+    <p class="lede">Questions about classes, coaching, team sessions or anything else? Send me a note and I'll get back to you, usually within two days.</p>
+  </div>
+  <div class="wrap section split" style="padding-top:0">
+    <div style="display:grid;gap:1.2rem;align-content:start">
+      <div class="offer"><span class="eyebrow">Email</span><h3>Write to me</h3><p style="margin:0"><a id="contactEmail" href="#contact">Email me</a></p></div>
+      <div class="offer"><span class="eyebrow">Instagram</span><h3>Send me a DM</h3><p style="margin:0;font-weight:300">If you'd rather message me, I'm <a href="https://ig.me/m/_izzyinmotion_" target="_blank" rel="noopener">@_izzyinmotion_</a> on Instagram.</p></div>
+      <p class="note" style="font-size:.82rem;color:var(--muted)">Personal training, nutrition coaching and team sessions are booked and billed through Best Fitness, 911 Central Ave, Albany.</p>
+    </div>
+    <form class="form" data-form="contact" id="contactForm">
+      <h3>Send a message</h3>
+      <div class="row"><label>Name<input id="ct-name" required autocomplete="name"></label><label>Email<input id="ct-email" type="email" required autocomplete="email"></label></div>
+      <label>What's it about?<select id="ct-topic"><option>A question</option><option>Classes</option><option>Personal training or nutrition</option><option>Team sessions</option><option>Retreats or run club</option><option>Shop</option><option>Something else</option></select></label>
+      <label>Message<textarea id="ct-msg" required></textarea></label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
 
 </main>
 
@@ -801,7 +841,8 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Explore</h4>
       <ul><li><a href="#story">My Story</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Follow</h4>
-      <ul class="social-list" id="socialFoot"></ul></div>
+      <ul class="social-list" id="socialFoot"></ul>
+      <p style="margin-top:1rem"><a href="#contact">Contact me →</a></p></div>
   </div>
   <div class="wrap" style="margin-top:2rem"><p style="font-size:.8rem">© 2026 Izzy Bisceglia · Studio photos by <a href="https://www.instagram.com/meganelizabethphotos/" target="_blank" rel="noopener">Megan Elizabeth Photos</a></p></div>
 </footer>
@@ -822,7 +863,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
   const RUNS = [
-    {date:"Thu · Nov 26", title:"Troy Turkey Trot", detail:"Thanksgiving morning in Troy · Izzy's family tradition, come say hi", real:true},
+    {date:"Thu · Nov 26", title:"Troy Turkey Trot", detail:"Thanksgiving morning in Troy · my family tradition, come say hi", real:true},
     {date:"Sat · Dec 6", title:"Washington Park easy loop", detail:"8:00 AM · 3–5 miles · all paces"},
     {date:"Sun · Dec 14", title:"Corning Preserve river run", detail:"9:00 AM · 4–6 miles · coffee after"},
     {date:"Thu · Jan 1", title:"New Year's Day shake-out", detail:"10:00 AM · 2 miles + stretch"}
@@ -985,14 +1026,46 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     teams:["Thanks, coach!","I'll be in touch about dates, focus and pricing for your team."],
     retreats:["You're on the retreat list.","You'll hear first when dates and location are set."],
     runs:["Welcome to run club!","You'll get the next group run details by email."],
-    shop:["You're on the list!","You'll hear first when new art, merch and blends are ready."]
+    shop:["You're on the list!","You'll hear first when new art, merch and blends are ready."],
+    contact:["Thanks for reaching out!","I'll get back to you soon, usually within two days."]
   };
+  // Every form emails Izzy through FormSubmit (formsubmit.co). Change the address here if it ever changes.
+  const IZZY_EMAIL = ["ibisceglia8","gmail.com"].join("@");
+  const SUBJECTS = {coaching:"Free consult request",teams:"Team session inquiry",retreats:"Retreat list sign-up",runs:"Run club sign-up",shop:"Made by Izzy: first dibs",contact:"New message"};
+  const ce=$("#contactEmail"); if(ce){ ce.href="mailto:"+IZZY_EMAIL; ce.textContent=IZZY_EMAIL; }
+  function formFields(f){
+    const d={};
+    f.querySelectorAll("input,select,textarea").forEach(x=>{
+      if(x.name==="_honey") return;
+      const lab=x.closest("label");
+      const k=lab?[...lab.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join(" ").replace(/\s+/g," ").trim():(x.getAttribute("aria-label")||x.id);
+      if(x.type==="checkbox"){ if(!x.checked) return; const fs=x.closest("fieldset"); const g=fs&&fs.querySelector("legend")?fs.querySelector("legend").textContent.trim():"Options"; d[g]=d[g]?d[g]+", "+k:k; return; }
+      if(x.value.trim()) d[k]=x.value.trim();
+    });
+    return d;
+  }
   document.querySelectorAll("form[data-form]").forEach(f=>{
-    f.addEventListener("submit",e=>{
+    const hp=el("input"); hp.type="text"; hp.name="_honey"; hp.tabIndex=-1; hp.autocomplete="off"; hp.setAttribute("aria-hidden","true"); hp.style.cssText="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"; f.appendChild(hp);
+    f.addEventListener("submit",async e=>{
       e.preventDefault();
-      const [h,p]=THANKS[f.dataset.form];
-      const t=el("div","thanks",'<h3>'+h+'</h3><p>'+p+'</p><p class="preview-note">Preview site: forms aren\'t connected to an inbox yet, so nothing was sent.</p>');
-      f.replaceWith(t);
+      if(hp.value) return;
+      const btn=f.querySelector('button[type="submit"]'), label=btn.textContent;
+      const old=f.querySelector(".form-error"); if(old) old.remove();
+      btn.disabled=true; btn.textContent="Sending…";
+      const fields=formFields(f), em=f.querySelector('input[type="email"]');
+      const body=Object.assign({_subject:"Website: "+(SUBJECTS[f.dataset.form]||"New message"),_template:"table",_captcha:"false",Form:SUBJECTS[f.dataset.form]||f.dataset.form},fields);
+      if(em&&em.value) body._replyto=em.value;
+      try{
+        const r=await fetch("https://formsubmit.co/ajax/"+IZZY_EMAIL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)});
+        const j=await r.json().catch(()=>({}));
+        if(!r.ok||String(j.success)!=="true") throw new Error(j.message||"Send failed");
+        const [h,p]=THANKS[f.dataset.form];
+        f.replaceWith(el("div","thanks",'<h3>'+h+'</h3><p>'+p+'</p>'));
+      }catch(err){
+        btn.disabled=false; btn.textContent=label;
+        const m=el("p","form-error",'Sorry, that didn\'t go through. Please try again, or email me at <a href="mailto:'+IZZY_EMAIL+'">'+IZZY_EMAIL+'</a>.');
+        m.setAttribute("role","alert"); m.style.cssText="margin:0;font-size:.9rem;color:#8a3b2e"; btn.after(m);
+      }
     });
   });
 
@@ -1028,15 +1101,21 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     views.forEach(v=>v.classList.toggle("active",v.dataset.view===n));
     nav.querySelectorAll("a").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")==="#"+n) || a.removeAttribute("aria-current"));
     nav.querySelectorAll("a").forEach(a=>{ if(a.getAttribute("href")==="#"+n) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+    nav.querySelectorAll(".dd").forEach(d=>{ d.classList.remove("open"); d.querySelector(".dd-btn").setAttribute("aria-expanded","false"); d.querySelector(".dd-btn").classList.toggle("here",!!d.querySelector('a[aria-current="page"]')); });
     nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); if(!lb.hidden) lb.hidden=true;
     window.scrollTo(0,0);
-    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
+    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
   document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; }));
+  nav.querySelectorAll(".dd").forEach(d=>{ const b=d.querySelector(".dd-btn");
+    b.addEventListener("click",()=>{ if(getComputedStyle(menuBtn).display!=="none") return; const o=!d.classList.contains("open"); nav.querySelectorAll(".dd").forEach(x=>{x.classList.remove("open");x.querySelector(".dd-btn").setAttribute("aria-expanded","false");}); d.classList.toggle("open",o); b.setAttribute("aria-expanded",String(o)); }); });
+  document.addEventListener("click",e=>{ if(!e.target.closest(".dd")) nav.querySelectorAll(".dd.open").forEach(d=>{d.classList.remove("open");d.querySelector(".dd-btn").setAttribute("aria-expanded","false");}); });
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape") nav.querySelectorAll(".dd.open").forEach(d=>{d.classList.remove("open");d.querySelector(".dd-btn").setAttribute("aria-expanded","false");}); });
   menuBtn.addEventListener("click",()=>{ const o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",String(o)); });
   window.addEventListener("hashchange",show);
   show();
 })();
 </script>
+
 </body></html>
