@@ -292,6 +292,10 @@ a.cal-ev:hover{outline:1px solid var(--moss)}
   .cal-detail h4{margin:0;font-family:var(--f-body);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
   .cal-detail .cal-ev{font-size:.9rem;padding:.55rem .7rem;border-radius:10px;white-space:normal}
 }
+.crew{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}
+.crew img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);display:block}
+.crew .big{grid-column:span 2;grid-row:span 2}
+@media (max-width:760px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .sched-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
 table.sched{border-collapse:collapse;width:100%;min-width:300px;font-variant-numeric:tabular-nums}
 table.sched th,table.sched td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
@@ -780,6 +784,16 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <figure class="ph photo"><img src="img/coffee.webp" alt="Iced coffee and a pastry after a run" loading="lazy"></figure>
     <figure class="ph photo"><img src="img/raceday.webp" alt="Izzy and friends with their medals after a race" loading="lazy"></figure>
   </div></div>
+  <div class="wrap section" style="padding-bottom:0">
+    <div style="display:grid;gap:.4rem;margin-bottom:1.2rem"><span class="eyebrow">The crew</span><h2>Run club, all year round</h2></div>
+    <div class="crew">
+      <img class="big" src="img/rc-fall.webp" alt="Run club group photo on a fall evening in the park" loading="lazy">
+      <img src="img/rc-spring.webp" alt="Run club group smiling in a parking lot on a sunny spring day" loading="lazy">
+      <img src="img/rc-b2b.webp" alt="Izzy and friends grinning together in the rain at the Beach to Beacon 10K" loading="lazy">
+      <img src="img/rc-dogs.webp" alt="A big run club group with two dogs after a summer run" loading="lazy">
+      <img src="img/rc-summer.webp" alt="Run club group under blue skies after a summer run" loading="lazy">
+    </div>
+  </div>
   <div class="wrap section split">
     <div style="display:grid;gap:1rem">
       <h2>Upcoming</h2>
