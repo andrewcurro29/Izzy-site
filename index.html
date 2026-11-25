@@ -254,29 +254,41 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 @media (max-width:520px){.timeline li,.timeline.steps li{grid-template-columns:1fr;gap:.2rem}}
 
 /* schedule */
-:root{--yoga:#DCE3D3;--pilates:#EFE3D3;--tone:#E6DDE8;--bfitt:#D9E4E8}
-.cal{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);padding:clamp(.8rem,2vw,1.2rem)}
-.cal-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
-.cal-head h3{font-size:1.5rem}
+:root{--yoga:#DCE3D3;--pilates:#EFE3D3;--tone:#E6DDE8;--bfitt:#D9E4E8;--yoga-d:#6F8A62;--pilates-d:#B48A5A;--tone-d:#8E6F96;--bfitt-d:#5E8796}
+.cal{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);padding:clamp(.8rem,2vw,1.4rem)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.8rem}
+.cal-head h3{font-size:1.7rem}
 .cal-nav{border:1px solid var(--line);background:var(--paper);border-radius:999px;width:2.5rem;height:2.5rem;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--ink)}
 .cal-nav:disabled{opacity:.3;cursor:default}
-.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.5rem}
-.cal-day{display:grid;align-content:start;gap:.45rem;min-height:10rem;padding:.6rem;border-radius:12px;background:var(--cream)}
-.cal-day.today{box-shadow:inset 0 0 0 2px var(--moss)}
-.cal-day.past{opacity:.55}
-.cal-dh{display:flex;align-items:baseline;justify-content:space-between;gap:.3rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.cal-dh b{font-family:var(--f-display,serif);font-size:1.35rem;letter-spacing:0;color:var(--ink);font-weight:500}
-.cal-ev{display:grid;gap:.05rem;padding:.45rem .55rem;border-radius:10px;background:var(--sage-soft);color:var(--ink);text-decoration:none;font-size:.85rem;line-height:1.25}
-.cal-ev small{color:var(--muted);font-size:.74rem;font-variant-numeric:tabular-nums}
+.cal-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1rem;margin-bottom:1rem;font-size:.8rem;color:var(--muted)}
+.cal-legend span::before{content:"";display:inline-block;width:.65rem;height:.65rem;border-radius:3px;margin-right:.35rem;vertical-align:-.05rem}
+.cal-legend .yoga::before{background:var(--yoga-d)}.cal-legend .pilates::before{background:var(--pilates-d)}.cal-legend .tone::before{background:var(--tone-d)}.cal-legend .bfitt::before{background:var(--bfitt-d)}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.cal-dow span{padding:.4rem .5rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left}
+.cal-grid{border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.cal-cell{min-height:7.5rem;padding:.4rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;align-content:start;gap:.25rem;background:var(--paper);font:inherit;text-align:left;color:var(--ink);cursor:default}
+.cal-cell.out{background:var(--cream);color:var(--muted)}
+.cal-cell.out .cal-ev,.cal-cell.past .cal-ev{opacity:.5}
+.cal-num{font-size:.85rem;font-variant-numeric:tabular-nums;width:1.7rem;height:1.7rem;display:grid;place-items:center;border-radius:999px}
+.cal-cell.past .cal-num{color:var(--muted)}
+.cal-cell.today .cal-num{background:var(--moss);color:var(--on-moss);font-weight:600}
+.cal-ev{display:block;padding:.15rem .4rem;border-radius:6px;background:var(--sage-soft);color:var(--ink);text-decoration:none;font-size:.74rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cal-ev b{font-weight:500;font-variant-numeric:tabular-nums;margin-right:.25rem}
 a.cal-ev:hover{outline:1px solid var(--moss)}
 .cal-ev.yoga{background:var(--yoga)}.cal-ev.pilates{background:var(--pilates)}.cal-ev.tone{background:var(--tone)}.cal-ev.bfitt{background:var(--bfitt)}
-.cal-ev.done{opacity:.5}
-.cal-evs{display:grid;gap:.45rem;align-content:start}
-.cal-none{font-size:.78rem;color:var(--muted)}
-@media (max-width:860px){
-  .cal-grid{grid-template-columns:1fr;gap:.4rem}
-  .cal-day{min-height:0;grid-template-columns:4.2rem 1fr;align-items:start;column-gap:.8rem}
-  .cal-dh{flex-direction:column;align-items:flex-start;gap:0;}
+.cal-dots{display:none;gap:3px;flex-wrap:wrap}
+.cal-dots i{width:6px;height:6px;border-radius:50%;background:var(--sage)}
+.cal-dots i.yoga{background:var(--yoga-d)}.cal-dots i.pilates{background:var(--pilates-d)}.cal-dots i.tone{background:var(--tone-d)}.cal-dots i.bfitt{background:var(--bfitt-d)}
+.cal-detail{display:none}
+@media (max-width:760px){
+  .cal-dow span{padding:.3rem 0;text-align:center;letter-spacing:.05em;font-size:.68rem}
+  .cal-cell{min-height:3.4rem;padding:.3rem .15rem;justify-items:center;cursor:pointer}
+  .cal-cell .cal-ev{display:none}
+  .cal-dots{display:flex;justify-content:center}
+  .cal-cell.sel{box-shadow:inset 0 0 0 2px var(--moss)}
+  .cal-detail{display:grid;gap:.45rem;margin-top:1rem}
+  .cal-detail h4{margin:0;font-family:var(--f-body);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .cal-detail .cal-ev{font-size:.9rem;padding:.55rem .7rem;border-radius:10px;white-space:normal}
 }
 .sched-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
 table.sched{border-collapse:collapse;width:100%;min-width:300px;font-variant-numeric:tabular-nums}
@@ -535,11 +547,14 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap" style="display:grid;gap:2rem;padding-bottom:2rem">
     <div class="cal" id="cal">
       <div class="cal-head">
-        <button type="button" class="cal-nav" id="calPrev" aria-label="Previous week">‹</button>
+        <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">‹</button>
         <div style="text-align:center"><h3 id="calTitle" style="margin:0"></h3><small id="calRange" style="color:var(--muted)"></small></div>
-        <button type="button" class="cal-nav" id="calNext" aria-label="Next week">›</button>
+        <button type="button" class="cal-nav" id="calNext" aria-label="Next month">›</button>
       </div>
-      <div class="cal-grid" id="calGrid" aria-live="polite"></div>
+      <div class="cal-legend"><span class="yoga">Yoga</span><span class="pilates">Pilates</span><span class="tone">Body Tone</span><span class="bfitt">BFitt</span></div>
+      <div class="cal-dow" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-detail" id="calDay" aria-live="polite"></div>
     </div>
     <div class="callout">
       <span class="tag" style="width:fit-content">Reserve in the Best Fitness app</span>
@@ -974,35 +989,46 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const parse=x=>{const [d,t]=x.split("T");const [Y,M,D]=d.split("-").map(Number);const [h,m]=t.split(":").map(Number);return new Date(Y,M-1,D,h,m);};
   const fmtTime=dt=>dt.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
   const fmtDay=dt=>dt.toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"});
-  // Calendar: one week at a time, Monday to Sunday, with arrows to page through the weeks in the schedule.
-  let calWeek=0;
-  const monday=d=>{ const x=new Date(d.getFullYear(),d.getMonth(),d.getDate()); x.setDate(x.getDate()-((x.getDay()+6)%7)); return x; };
+  // Calendar: a month view (Sunday to Saturday) with arrows to page through the months in the schedule.
+  // On phones each day shows colored dots; tapping a day lists its classes under the calendar.
+  let calMonth=0, calSel=null;
   const kind=t=>{ t=t.toLowerCase(); return t.includes("yoga")?"yoga":t.includes("pilates")?"pilates":t.includes("tone")?"tone":t.includes("bfit")?"bfitt":""; };
-  function renderCal(){
-    const now=new Date(), start0=monday(now);
-    const all=SCHED.classes.map(c=>({...c,dt:parse(c.start),en:parse(c.end)})).filter(c=>c.dt>=start0).sort((a,b)=>a.dt-b.dt);
-    const lastWk=all.length?Math.max(0,Math.round((monday(all[all.length-1].dt)-start0)/(7*864e5))):0;
-    calWeek=Math.min(Math.max(calWeek,0),lastWk);
-    const ws=new Date(start0); ws.setDate(ws.getDate()+calWeek*7);
-    const we=new Date(ws); we.setDate(we.getDate()+6);
-    $("#calTitle").textContent=calWeek===0?"This week":calWeek===1?"Next week":"Week of "+ws.toLocaleDateString("en-US",{month:"short",day:"numeric"});
-    $("#calRange").textContent=ws.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" – "+we.toLocaleDateString("en-US",{month:"short",day:"numeric"});
-    $("#calPrev").disabled=calWeek===0; $("#calNext").disabled=calWeek>=lastWk;
-    const g=$("#calGrid"); g.innerHTML="";
-    for(let i=0;i<7;i++){
-      const d=new Date(ws); d.setDate(d.getDate()+i);
-      const evs=all.filter(c=>c.dt.toDateString()===d.toDateString());
-      const isToday=d.toDateString()===now.toDateString(), isPast=d<new Date(now.getFullYear(),now.getMonth(),now.getDate());
-      let h='<div class="cal-dh"><span>'+esc(d.toLocaleDateString("en-US",{weekday:"short"}))+'</span><b>'+d.getDate()+'</b></div><div class="cal-evs">';
-      if(!evs.length) h+='<span class="cal-none">No classes</span>';
-      evs.forEach(c=>{ const tag=c.book?'a':'div', attrs=c.book?' href="'+esc(c.book)+'" target="_blank" rel="noopener" title="Reserve"':'';
-        h+='<'+tag+attrs+' class="cal-ev '+kind(c.title)+(c.en<now?' done':'')+'"><small>'+esc(fmtTime(c.dt))+'</small>'+esc(nice(c.title))+'</'+tag+'>'; });
-      h+='</div>';
-      g.insertAdjacentHTML("beforeend",'<div class="cal-day'+(isToday?' today':'')+(isPast?' past':'')+'" aria-label="'+esc(d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"}))+'">'+h+'</div>');
-    }
+  const shortTime=dt=>{ let h=dt.getHours(),m=dt.getMinutes(),ap=h<12?"a":"p"; h=h%12||12; return h+(m?":"+String(m).padStart(2,"0"):"")+ap; };
+  const evHtml=(c,full)=>{ const tag=c.book?'a':'div', attrs=c.book?' href="'+esc(c.book)+'" target="_blank" rel="noopener" title="Reserve"':'';
+    return '<'+tag+attrs+' class="cal-ev '+kind(c.title)+'"><b>'+esc(full?fmtTime(c.dt):shortTime(c.dt))+'</b>'+esc(nice(c.title))+'</'+tag+'>'; };
+  function calClasses(){ return SCHED.classes.map(c=>({...c,dt:parse(c.start),en:parse(c.end)})).sort((a,b)=>a.dt-b.dt); }
+  function renderDay(all,d){
+    const box=$("#calDay"), evs=all.filter(c=>c.dt.toDateString()===d.toDateString());
+    box.innerHTML='<h4>'+esc(d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"}))+'</h4>'+(evs.length?evs.map(c=>evHtml(c,true)).join(""):'<p style="margin:0;color:var(--muted)">No classes this day.</p>');
   }
-  $("#calPrev").addEventListener("click",()=>{ calWeek--; renderCal(); });
-  $("#calNext").addEventListener("click",()=>{ calWeek++; renderCal(); });
+  function renderCal(){
+    const now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    const all=calClasses();
+    const lastDt=all.length?all[all.length-1].dt:now;
+    const maxM=Math.max(0,(lastDt.getFullYear()-now.getFullYear())*12+lastDt.getMonth()-now.getMonth());
+    calMonth=Math.min(Math.max(calMonth,0),maxM);
+    const first=new Date(now.getFullYear(),now.getMonth()+calMonth,1);
+    $("#calTitle").textContent=first.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+    $("#calRange").textContent="";
+    $("#calPrev").disabled=calMonth===0; $("#calNext").disabled=calMonth>=maxM;
+    const start=new Date(first); start.setDate(1-first.getDay());
+    const last=new Date(first.getFullYear(),first.getMonth()+1,0);
+    const cells=Math.ceil((first.getDay()+last.getDate())/7)*7;
+    if(!calSel||calSel.getMonth()!==first.getMonth()) calSel=calMonth===0?today:first;
+    const g=$("#calGrid"); g.innerHTML="";
+    for(let i=0;i<cells;i++){
+      const d=new Date(start); d.setDate(start.getDate()+i);
+      const evs=all.filter(c=>c.dt.toDateString()===d.toDateString());
+      const cls=["cal-cell"]; if(d.getMonth()!==first.getMonth()) cls.push("out"); if(d<today) cls.push("past"); if(d.getTime()===today.getTime()) cls.push("today"); if(d.getTime()===calSel.getTime()) cls.push("sel");
+      const cell=el("div",cls.join(" "),'<span class="cal-num">'+d.getDate()+'</span>'+evs.map(c=>evHtml(c,false)).join("")+'<span class="cal-dots">'+evs.map(c=>'<i class="'+kind(c.title)+'"></i>').join("")+'</span>');
+      cell.setAttribute("aria-label",d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})+": "+(evs.length?evs.map(c=>fmtTime(c.dt)+" "+nice(c.title)).join(", "):"no classes"));
+      cell.addEventListener("click",e=>{ if(e.target.closest("a")) return; calSel=d; g.querySelectorAll(".sel").forEach(x=>x.classList.remove("sel")); cell.classList.add("sel"); renderDay(all,d); });
+      g.appendChild(cell);
+    }
+    renderDay(all,calSel);
+  }
+  $("#calPrev").addEventListener("click",()=>{ calMonth--; calSel=null; renderCal(); });
+  $("#calNext").addEventListener("click",()=>{ calMonth++; calSel=null; renderCal(); });
   function renderSchedule(){
     const now=new Date(); const soon=new Date(now.getTime()+14*864e5);
     const list=SCHED.classes.map(c=>({...c,dt:parse(c.start),en:parse(c.end)})).filter(c=>c.en>now).sort((a,b)=>a.dt-b.dt);
