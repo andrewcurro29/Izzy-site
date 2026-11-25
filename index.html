@@ -521,6 +521,13 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <a class="btn small ghost" href="https://itunes.apple.com/app/id1551198990?mt=8" target="_blank" rel="noopener">Best Fitness app (iPhone)</a>
         <a class="btn small ghost" href="https://play.google.com/store/apps/details?id=com.trainerize.bestfitness" target="_blank" rel="noopener">Best Fitness app (Android)</a>
       </div>
+      <div style="border-top:1px solid var(--line);padding-top:1rem;display:grid;gap:.6rem">
+        <p style="margin:0"><strong>Rather book with me directly?</strong> New to Best Fitness, not sure which class fits, or want a spot saved? Reach out and I'll help you get booked.</p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <a class="btn small" href="#contact" data-topic="Classes">Message me</a>
+          <a class="btn small ghost" href="https://ig.me/m/_izzyinmotion_" target="_blank" rel="noopener">DM me on Instagram</a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="wrap section"><div class="cards">
@@ -1111,6 +1118,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
+  document.querySelectorAll("[data-topic]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("ct-topic"); if(sel) sel.value=a.dataset.topic; }));
   document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; }));
   nav.querySelectorAll(".dd").forEach(d=>{ const b=d.querySelector(".dd-btn");
     b.addEventListener("click",()=>{ if(getComputedStyle(menuBtn).display!=="none") return; const o=!d.classList.contains("open"); nav.querySelectorAll(".dd").forEach(x=>{x.classList.remove("open");x.querySelector(".dd-btn").setAttribute("aria-expanded","false");}); d.classList.toggle("open",o); b.setAttribute("aria-expanded",String(o)); }); });
