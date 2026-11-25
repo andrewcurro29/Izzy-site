@@ -262,7 +262,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
     <nav class="main" id="mainNav" aria-label="Main">
       <a href="#story">My Story</a>
-      <a href="#journal">Journal</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#classes">Classes</a>
       <a href="#coaching">Coaching</a>
       <a href="#nutrition">Nutrition</a>
@@ -271,7 +271,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <a href="#runs">Run Club</a>
       <a href="#shop">Shop</a>
       <a href="#gallery">Gallery</a>
-      <a class="btn small" href="#newsletter">Free Newsletter</a>
+      <a class="btn small" href="#newsletter">Subscribe</a>
     </nav>
   </div>
 </header>
@@ -303,7 +303,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
   <div class="wrap feed-layout">
     <div class="feed">
-      <div class="feed-head"><h2>From the journal</h2><a href="#journal">All posts →</a></div>
+      <div class="feed-head"><h2>From the newsletter</h2><a href="#newsletter">All letters →</a></div>
 
       <article class="post">
         <figure class="ph photo "><img src="img/coaching.webp" alt="Izzy coaching on the gym floor at Best Fitness" loading="lazy"></figure>
@@ -462,14 +462,18 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div></div>
 </section>
 
-<!-- ================= JOURNAL ================= -->
-<section data-view="journal">
+<!-- ================= NEWSLETTER (journal + newsletter) ================= -->
+<section data-view="newsletter">
   <div class="wrap page-head">
-    <span class="eyebrow">Journal</span>
-    <h1>Notes from the Capital Region</h1>
-    <p class="lede">Weekly writing on habit building, sustainable training, recovery, and the trails, events and restaurants that make this area home. Published on Substack, collected here.</p>
+    <span class="eyebrow">Free weekly newsletter</span>
+    <h1>Izzy in Motion</h1>
+    <p class="lede">Boots-on-the-ground notes from a fitness professional in Albany: habit building, sustainable training, recovery, and the trails, events and restaurants that make this area home. Free, weekly, on Substack.</p>
+    <form class="nl-form" data-nl style="max-width:620px"><label style="flex:1 1 260px">Email<input type="email" id="nl-page" placeholder="you@email.com" required autocomplete="email"></label><button class="btn" type="submit" style="align-self:end">Subscribe free</button></form>
+    <p class="preview-note">Subscribing opens Substack with your email filled in. You can unsubscribe any time.</p>
   </div>
-  <div class="wrap" style="padding-bottom:3rem"><div class="cards" id="journalCards"></div>
+  <div class="wrap" style="padding-bottom:3rem">
+    <div class="feed-head" style="margin-bottom:1.2rem"><h2>Recent letters</h2></div>
+    <div class="cards" id="journalCards"></div>
     <p class="preview-note" style="margin-top:1.5rem">Only the welcome post is live so far. The other cards are topics from the welcome letter, ready to swap for real posts as they're published. Once the site is hosted, this list can pull from the Substack RSS feed automatically.</p>
   </div>
 </section>
@@ -767,19 +771,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
 </section>
 
-<!-- ================= NEWSLETTER ================= -->
-<section data-view="newsletter">
-  <div class="wrap page-head" style="max-width:820px">
-    <span class="eyebrow">Free weekly newsletter</span>
-    <h1>Izzy in Motion</h1>
-    <p class="lede">Boots-on-the-ground coverage from a fitness professional in Albany, and an athlete trying to educate the community around her. Observations, habit building, sustainable tips, local events, trails and killer restaurants. Free, weekly, on Substack.</p>
-  </div>
-  <div class="wrap" style="max-width:820px;display:grid;gap:2rem;padding-bottom:3rem">
-    <form class="nl-form" data-nl><label style="flex:1 1 260px">Email<input type="email" id="nl-page" placeholder="you@email.com" required autocomplete="email"></label><button class="btn" type="submit" style="align-self:end">Subscribe free</button></form>
-    <p class="preview-note">Subscribing opens Substack with your email filled in. You can unsubscribe any time.</p>
-    <figure class="ph pano"><span class="cap">Capital Region trail or Albany skyline</span></figure>
-  </div>
-</section>
 
 </main>
 
@@ -791,7 +782,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <p style="font-size:.8rem">Content on this site is for general education and isn't medical advice. Check with your doctor before starting a new program. As an Amazon Associate I earn from qualifying purchases; some product links on this site are affiliate links.</p>
     </div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Explore</h4>
-      <ul><li><a href="#story">My Story</a></li><li><a href="#journal">Journal</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+      <ul><li><a href="#story">My Story</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Follow</h4>
       <ul class="social-list" id="socialFoot"></ul></div>
   </div>
@@ -1007,13 +998,14 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const nav=$("#mainNav"), menuBtn=$("#menuBtn");
   function show(){
     let n=(location.hash||"#home").slice(1);
+    if(n==="journal") n="newsletter";
     if(!names.includes(n)) n="home";
     views.forEach(v=>v.classList.toggle("active",v.dataset.view===n));
     nav.querySelectorAll("a").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")==="#"+n) || a.removeAttribute("aria-current"));
     nav.querySelectorAll("a").forEach(a=>{ if(a.getAttribute("href")==="#"+n) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
     nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); if(!lb.hidden) lb.hidden=true;
     window.scrollTo(0,0);
-    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",journal:"Journal · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
+    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
   document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; }));
