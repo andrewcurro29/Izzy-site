@@ -181,12 +181,13 @@ figure{margin:0}
 .feed{display:grid;gap:2.75rem;min-width:0;align-content:start}
 .post{display:grid;grid-template-columns:240px minmax(0,1fr);gap:1.5rem;align-items:start}
 .post .ph{aspect-ratio:4/3;min-height:0}
+.post .ph.portrait-post{aspect-ratio:4/5}
 .post .meta{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
 .post h3 a{color:var(--ink);text-decoration:none}
 .post h3 a:hover{text-decoration:underline}
 .post .body{display:grid;gap:.6rem;min-width:0}
 .post p{color:var(--muted);font-weight:300}
-@media (max-width:600px){.post{grid-template-columns:1fr}}
+@media (max-width:600px){.post{grid-template-columns:1fr}.post .ph.portrait-post{aspect-ratio:1/1}}
 .feed-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.8rem}
 
 aside.side{display:grid;gap:2rem;align-content:start}
@@ -369,7 +370,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <div class="feed-head"><h2>From the newsletter</h2><a href="#newsletter">All letters →</a></div>
 
       <article class="post">
-        <figure class="ph photo"><img src="img/balance.webp" alt="Izzy holding a standing balance pose in the studio" loading="lazy"></figure>
+        <figure class="ph photo top portrait-post"><img src="img/smile.webp" alt="Izzy smiling in a Best Fitness shirt" loading="lazy"></figure>
         <div class="body">
           <div class="meta"><span>Newsletter</span></div>
           <h3><a href="#welcome">Welcome to Izzy in Motion</a></h3>
