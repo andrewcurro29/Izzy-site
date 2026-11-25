@@ -1236,7 +1236,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     document.title=titles[n]||"Izzy Bisceglia";
   }
   document.querySelectorAll("[data-topic]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("ct-topic"); if(sel) sel.value=a.dataset.topic; }));
-  document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; }));
+  document.querySelectorAll("[data-pick]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("c-type"); if(sel) sel.value=a.dataset.pick; setTimeout(()=>{ const f=document.getElementById("coachForm"); if(f) f.scrollIntoView({block:"start"}); },60); }));
   document.querySelectorAll("[data-scroll]").forEach(a=>a.addEventListener("click",e=>{ const t=document.getElementById(a.dataset.scroll); if(t){ e.preventDefault(); t.scrollIntoView({behavior:"smooth",block:"start"}); } }));
   nav.querySelectorAll(".dd").forEach(d=>{ const b=d.querySelector(".dd-btn");
     b.addEventListener("click",()=>{ if(getComputedStyle(menuBtn).display!=="none") return; const o=!d.classList.contains("open"); nav.querySelectorAll(".dd").forEach(x=>{x.classList.remove("open");x.querySelector(".dd-btn").setAttribute("aria-expanded","false");}); d.classList.toggle("open",o); b.setAttribute("aria-expanded",String(o)); }); });
