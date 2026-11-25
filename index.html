@@ -368,9 +368,9 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <div id="nextClasses" style="display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
       </section>
 
-      <section style="display:grid;gap:1rem">
-        <div class="feed-head"><h2>Izzy's picks</h2><a href="#shop">Shop all →</a></div>
-        <div id="homePicks" style="display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+      <section style="display:grid;gap:.7rem;padding:1.1rem 1.4rem;background:var(--sage-soft);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap"><span class="eyebrow">Izzy's picks</span><a href="#shop" style="font-size:.9rem">Shop all →</a></div>
+        <div id="homePicks" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
         <p class="preview-note" style="margin:0">As an Amazon Associate I earn from qualifying purchases.</p>
       </section>
     </div>
@@ -918,9 +918,9 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   renderPicks();
   // Home page: a small shop teaser with three favorites
   const hp=$("#homePicks");
-  if(hp) ["Grippy yoga mat","Pilates ring","Foam roller"].map(n=>PICKS.find(p=>p.name===n)).filter(Boolean).forEach(p=>{
+  if(hp) ["Grippy yoga mat","Pilates ring","Foam roller","Running hydration vest"].map(n=>PICKS.find(p=>p.name===n)).filter(Boolean).forEach(p=>{
     const href=p.url||amazon(p.q); const store=p.store||"Amazon";
-    hp.insertAdjacentHTML("beforeend",'<article class="pick"><span class="cat">'+esc(p.cat)+'</span><h4>'+esc(p.name)+'</h4><p>'+esc(p.note)+'</p><div class="row"><a class="btn small" href="'+esc(href)+'" target="_blank" rel="sponsored noopener">Shop on '+esc(store)+' →</a></div></article>');
+    hp.insertAdjacentHTML("beforeend",'<a class="tag" style="text-decoration:none;color:var(--ink);background:var(--paper);padding:.45rem .8rem" href="'+esc(href)+'" target="_blank" rel="sponsored noopener">'+esc(p.name)+' →</a>');
   });
 
   function fillPost(target, from){
