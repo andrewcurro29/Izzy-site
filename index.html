@@ -367,6 +367,12 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <div class="feed-head"><h2>This week at Best Fitness</h2><a href="#classes">Full schedule →</a></div>
         <div id="nextClasses" style="display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
       </section>
+
+      <section style="display:grid;gap:1rem">
+        <div class="feed-head"><h2>Izzy's picks</h2><a href="#shop">Shop all →</a></div>
+        <div id="homePicks" style="display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+        <p class="preview-note" style="margin:0">As an Amazon Associate I earn from qualifying purchases.</p>
+      </section>
     </div>
 
     <aside class="side" aria-label="About Izzy">
@@ -910,6 +916,12 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const pf=$("#pickFilters");
   PICK_CATS.forEach(c=>{ const b=el("button",null,esc(c)); b.type="button"; b.id="pick-"+c.replace(/\W+/g,"-").toLowerCase(); b.setAttribute("aria-pressed",String(c===pickCat)); b.addEventListener("click",()=>{ pickCat=c; pf.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); renderPicks(); }); pf.appendChild(b); });
   renderPicks();
+  // Home page: a small shop teaser with three favorites
+  const hp=$("#homePicks");
+  if(hp) ["Grippy yoga mat","Pilates ring","Foam roller"].map(n=>PICKS.find(p=>p.name===n)).filter(Boolean).forEach(p=>{
+    const href=p.url||amazon(p.q); const store=p.store||"Amazon";
+    hp.insertAdjacentHTML("beforeend",'<article class="pick"><span class="cat">'+esc(p.cat)+'</span><h4>'+esc(p.name)+'</h4><p>'+esc(p.note)+'</p><div class="row"><a class="btn small" href="'+esc(href)+'" target="_blank" rel="sponsored noopener">Shop on '+esc(store)+' →</a></div></article>');
+  });
 
   function fillPost(target, from){
     POST.slice(from).forEach(p=>{
