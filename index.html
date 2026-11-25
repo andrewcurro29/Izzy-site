@@ -259,7 +259,10 @@ table.sched{border-collapse:collapse;width:100%;min-width:300px;font-variant-num
 table.sched th,table.sched td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
 table.sched th{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
 table.sched tr:last-child td{border-bottom:0}
-.cls{display:inline-block;padding:.15em .65em;border-radius:999px;background:var(--sage-soft);font-size:.85rem}
+.sched td b,.sched td:nth-child(2){white-space:nowrap}
+.wk-s{display:none}
+@media (max-width:620px){table.sched th,table.sched td{padding:.75rem .6rem}.wk-l{display:none}.wk-s{display:inline}}
+.cls{white-space:nowrap;display:inline-block;padding:.15em .65em;border-radius:999px;background:var(--sage-soft);font-size:.85rem}
 .callout{display:grid;gap:.6rem;padding:1.3rem 1.4rem;border:1px dashed var(--sage);border-radius:var(--radius);background:color-mix(in srgb,var(--sage-soft) 45%,transparent)}
 .callout p{font-weight:300}
 
@@ -941,7 +944,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     const list=SCHED.classes.map(c=>({...c,dt:parse(c.start),en:parse(c.end)})).filter(c=>c.en>now).sort((a,b)=>a.dt-b.dt);
     const sb=$("#schedBody"); sb.innerHTML=""; let last="";
     const two=list.filter(c=>c.dt<soon);
-    (two.length?two:list.slice(0,12)).forEach(c=>{ const day=fmtDay(c.dt); sb.insertAdjacentHTML("beforeend",'<tr><td>'+(day!==last?'<b>'+esc(day)+'</b>':'')+'</td><td>'+esc(fmtTime(c.dt))+'</td><td><span class="cls">'+esc(nice(c.title))+'</span></td><td>'+(c.book?'<a href="'+esc(c.book)+'" target="_blank" rel="noopener">Reserve</a>':'')+'</td></tr>'); last=day; });
+    (two.length?two:list.slice(0,12)).forEach(c=>{ const day=fmtDay(c.dt); sb.insertAdjacentHTML("beforeend",'<tr><td>'+(day!==last?'<b><span class="wk-l">'+esc(c.dt.toLocaleDateString("en-US",{weekday:"long"}))+'</span><span class="wk-s">'+esc(c.dt.toLocaleDateString("en-US",{weekday:"short"}))+'</span>, '+esc(c.dt.toLocaleDateString("en-US",{month:"short",day:"numeric"}))+'</b>':'')+'</td><td>'+esc(fmtTime(c.dt))+'</td><td><span class="cls">'+esc(nice(c.title))+'</span></td><td>'+(c.book?'<a href="'+esc(c.book)+'" target="_blank" rel="noopener">Reserve</a>':'')+'</td></tr>'); last=day; });
     if(!list.length) sb.innerHTML='<tr><td colspan="4">No upcoming classes are listed right now. Check the official schedule below.</td></tr>';
     const up=new Date(SCHED.updated);
     $("#schedUpdated").textContent="Pulled from the Best Fitness Albany schedule, last updated "+up.toLocaleDateString("en-US",{month:"long",day:"numeric"})+". Subs and holiday changes can still happen, so check the app before you head over.";
