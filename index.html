@@ -576,7 +576,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     </div>
   </div>
   <div class="wrap section"><div class="cards">
-    <div class="card"><figure class="ph photo top"><img src="img/hero.webp" alt="Izzy in a yoga pose" loading="lazy"></figure><h3>Yoga</h3><p>Breath-led flow for strength, mobility and a quieter mind. I teach two styles:</p><ul style="margin:0;padding-left:1.1rem;display:grid;gap:.35rem;font-weight:300;color:var(--muted);font-size:.95rem"><li><strong style="font-weight:500;color:var(--ink)">Hot yoga</strong> is a warmer, more challenging flow for intermediate students.</li><li><strong style="font-weight:500;color:var(--ink)">Gentle yoga</strong> is slower and supported, great for beginners and older adults.</li></ul></div>
+    <div class="card"><figure class="ph photo top"><img src="img/hero.webp" alt="Izzy in a yoga pose" loading="lazy"></figure><h3>Yoga</h3><p>Breath-led flow for strength, mobility and a quieter mind. I teach two styles:</p><ul style="margin:0;padding-left:1.1rem;display:grid;gap:.35rem;font-weight:300;color:var(--muted);font-size:.95rem"><li><strong style="font-weight:500;color:var(--ink)">Hot yoga</strong> (Yoga 90, in a 90° room) is a warmer, more challenging flow for intermediate students.</li><li><strong style="font-weight:500;color:var(--ink)">Gentle yoga</strong> is slower and supported, great for beginners and older adults.</li></ul></div>
     <div class="card"><figure class="ph photo "><img src="img/pilates.webp" alt="Izzy demonstrating Pilates" loading="lazy"></figure><h3>Pilates</h3><p>Controlled, core-first work that builds stability for running, lifting and everyday life.</p></div>
     <div class="card"><figure class="ph photo top"><img src="img/bodytone.webp" alt="Izzy smiling in the squat racks" loading="lazy"></figure><h3>Body Tone</h3><p>Full-body strength with light weights and higher reps. Leave feeling worked, not wrecked.</p></div>
     <div class="card"><figure class="ph photo top"><img src="img/bfitt.webp" alt="Izzy with a kettlebell in the BFitt studio" loading="lazy"></figure><h3>BFitt:60</h3><p>Best Fitness small-group training. A different workout every day, built for beginners through athletes.</p></div>
@@ -986,7 +986,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   }
   renderSocial($("#socialFoot"));
 
-  const PRETTY={"YOGA.":"Yoga","Yoga90":"Yoga 90","BodyTone":"Body Tone","BFITT Burn":"BFitt Burn","BFITT Strength":"BFitt Strength"};
+  const PRETTY={"YOGA.":"Gentle Yoga","Yoga90":"Hot Yoga (90°)","BodyTone":"Body Tone","BFITT Burn":"BFitt Burn","BFITT Strength":"BFitt Strength"};
   const nice=t=>PRETTY[t]||t;
   const parse=x=>{const [d,t]=x.split("T");const [Y,M,D]=d.split("-").map(Number);const [h,m]=t.split(":").map(Number);return new Date(Y,M-1,D,h,m);};
   const fmtTime=dt=>dt.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
