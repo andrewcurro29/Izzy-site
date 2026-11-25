@@ -598,7 +598,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div style="display:grid;gap:1.5rem">
       <div class="offer"><h3>Personal training</h3><ul><li>Strength, mobility and functional training</li><li>Return-to-sport and post-rehab progressions</li><li>Race and event preparation</li></ul><a href="#training">How personal training works →</a></div>
       <div class="offer"><h3>Nutrition coaching</h3><ul><li>Sustainable eating habits, no crash diets</li><li>Fueling for training and recovery</li><li>Weekly check-ins and accountability</li></ul><a href="#nutrition">How nutrition coaching works →</a></div>
-      <div class="offer"><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep.</p></div>
+      <div class="offer"><h3>The BLean Challenge</h3><p style="color:var(--muted);font-weight:300">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep.</p><a href="#blean">How the BLean Challenge works →</a></div>
       <figure class="ph photo wide top"><img src="img/strength.webp" alt="Izzy smiling and flexing in the squat rack at Best Fitness" loading="lazy"></figure>
     </div>
     <form class="form" id="coachForm" data-form="coaching">
@@ -651,6 +651,24 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <li><b>4. Train and progress</b><span>We train together at Best Fitness and adjust the plan as you get stronger.</span></li>
     </ol>
     <a class="btn" style="margin-top:1.6rem" href="#coaching" data-pick="Personal training">Book a free consult</a>
+  </div>
+</section>
+
+<!-- ================= BLEAN HOW ================= -->
+<section data-view="blean">
+  <div class="wrap page-head">
+    <span class="eyebrow">The BLean Challenge</span>
+    <h1>How the BLean Challenge works</h1>
+    <p class="lede">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep.</p>
+  </div>
+  <div class="wrap section" style="padding-top:0">
+    <ol class="timeline steps">
+      <li><b>1. Join a round</b><span>Each round runs six weeks at Best Fitness. Message me for the next start date.</span></li>
+      <li><b>2. Learn your nutrition</b><span>Work with a coach to understand what you're eating now and what your body needs to fuel your training.</span></li>
+      <li><b>3. Train consistently</b><span>Mix personal training sessions with classes. Last round's winner, Josh, trained four times a week.</span></li>
+      <li><b>4. Keep the habits</b><span>Six weeks to learn it. A lifetime to use it.</span></li>
+    </ol>
+    <a class="btn" style="margin-top:1.6rem" href="#coaching" data-pick="BLean Challenge">Ask about the next round</a>
   </div>
 </section>
 
@@ -1214,7 +1232,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     nav.querySelectorAll(".dd").forEach(d=>{ d.classList.remove("open"); d.querySelector(".dd-btn").setAttribute("aria-expanded","false"); d.querySelector(".dd-btn").classList.toggle("here",!!d.querySelector('a[aria-current="page"]')); });
     nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); if(!lb.hidden) lb.hidden=true;
     window.scrollTo(0,0);
-    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",training:"How Personal Training Works · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
+    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",training:"How Personal Training Works · Izzy Bisceglia",blean:"The BLean Challenge · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
   document.querySelectorAll("[data-topic]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("ct-topic"); if(sel) sel.value=a.dataset.topic; }));
