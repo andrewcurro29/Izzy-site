@@ -377,10 +377,6 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <div class="creds"><span class="tag">NASM CPT</span><span class="tag">NASM Women's Fitness Specialist</span><span class="tag">AFAA GFI</span><span class="tag">Pilates</span><span class="tag">Nutrition</span></div>
         <a href="#story">Read my story →</a>
       </div>
-      <div class="side-block">
-        <h4>Follow along</h4>
-        <ul class="social-list" id="socialSide"></ul>
-      </div>
     </aside>
   </div>
 </section>
@@ -859,7 +855,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       list.appendChild(li);
     });
   }
-  renderSocial($("#socialSide")); renderSocial($("#socialFoot"));
+  renderSocial($("#socialFoot"));
 
   const PRETTY={"YOGA.":"Yoga","Yoga90":"Yoga 90","BodyTone":"Body Tone","BFITT Burn":"BFitt Burn","BFITT Strength":"BFitt Strength"};
   const nice=t=>PRETTY[t]||t;
