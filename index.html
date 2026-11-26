@@ -992,6 +992,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       </div>
       <div class="chips" id="pickFilters" role="group" aria-label="Filter picks"></div>
       <div class="picks" id="picksGrid"></div>
+      <p id="picksEmpty" hidden style="color:var(--muted);font-weight:300;margin:0">My product picks are coming soon.</p>
       <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. As an Amazon Associate I earn from qualifying purchases, and I may earn a small commission from other retailers, at no extra cost to you. I only recommend products I use or would hand to a client.</p>
     </section>
   </div>
@@ -1133,7 +1134,9 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     {cat:"Nutrition", name:"Protein powder", note:"An easy way to hit protein goals. Look for third-party tested.", q:"third party tested protein powder"},
     {cat:"Nutrition", name:"Shaker bottle", note:"Leak-proof and gym-bag friendly.", q:"protein shaker bottle"}
   ];
-  const PICK_CATS=["All",...new Set(PICKS.map(p=>p.cat))];
+  // Only picks with a url (a product link from Izzy's Associates account) are shown on the site.
+  const SHOWN=PICKS.filter(p=>p.url);
+  const PICK_CATS=["All",...new Set(SHOWN.map(p=>p.cat))];
 
   // ---------- Rendering ----------
   const $ = (s, r=document) => r.querySelector(s);
@@ -1231,7 +1234,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   let pickCat="All";
   function renderPicks(){
     const g=$("#picksGrid"); g.innerHTML="";
-    PICKS.filter(p=>pickCat==="All"||p.cat===pickCat).forEach(p=>{
+    SHOWN.filter(p=>pickCat==="All"||p.cat===pickCat).forEach(p=>{
       const href=p.url||amazon(p.q); const store=p.store||"Amazon";
       g.insertAdjacentHTML("beforeend",'<article class="pick"><span class="cat">'+esc(p.cat)+'</span><h4>'+esc(p.name)+'</h4><p>'+esc(p.note)+'</p><div class="row"><span class="store">'+esc(store)+'</span><a class="btn small" href="'+esc(href)+'" target="_blank" rel="sponsored noopener">Shop on '+esc(store)+' →</a></div></article>');
     });
@@ -1239,9 +1242,11 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const pf=$("#pickFilters");
   PICK_CATS.forEach(c=>{ const b=el("button",null,esc(c)); b.type="button"; b.id="pick-"+c.replace(/\W+/g,"-").toLowerCase(); b.setAttribute("aria-pressed",String(c===pickCat)); b.addEventListener("click",()=>{ pickCat=c; pf.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); renderPicks(); }); pf.appendChild(b); });
   renderPicks();
+  if(!SHOWN.length){ pf.hidden=true; $("#picksGrid").hidden=true; $("#picksEmpty").hidden=false; }
   // Home page: a small shop teaser with three favorites
   const hp=$("#homePicks");
-  if(hp) ["Grippy yoga mat","Pilates ring","Foam roller","Running hydration vest"].map(n=>PICKS.find(p=>p.name===n)).filter(Boolean).forEach(p=>{
+  if(hp&&!SHOWN.length) hp.parentElement.hidden=true;
+  if(hp) SHOWN.slice(0,4).forEach(p=>{
     const href=p.url||amazon(p.q); const store=p.store||"Amazon";
     hp.insertAdjacentHTML("beforeend",'<a style="font-size:.82rem;color:var(--muted)" href="'+esc(href)+'" target="_blank" rel="sponsored noopener">'+esc(p.name)+'</a>');
   });
