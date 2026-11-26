@@ -210,6 +210,12 @@ aside.side{display:grid;gap:2rem;align-content:start}
 @media (max-width:760px){.newsletter .inner{grid-template-columns:1fr}}
 .nl-form{display:flex;gap:.6rem;flex-wrap:wrap}
 .nl-form input{flex:1 1 220px;min-width:0}
+aside.side{display:flex;flex-direction:column}
+.side-inner{display:grid;gap:2rem;align-content:start;flex:1}
+.side-sticky{display:grid;gap:2rem;position:sticky;top:6rem;align-self:start}
+.side-links{list-style:none;padding:0;margin:0;display:grid;gap:.45rem}
+.side-links a{font-weight:400}
+@media (max-width:900px){.side-sticky{position:static}}
 .side .nl-form{flex-direction:column}
 .side .nl-form input{flex:none}
 
@@ -465,7 +471,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
     </div>
 
-    <aside class="side" aria-label="About Izzy">
+    <aside class="side" aria-label="About Izzy"><div class="side-inner">
       <section style="display:grid;gap:.8rem;padding:1.3rem 1.4rem;background:var(--sage-soft);border-radius:var(--radius)">
         <span class="eyebrow">Shop</span>
         <h3 style="font-size:1.6rem;margin:0">Made by Izzy</h3>
@@ -476,7 +482,29 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
           <div id="homePicks" style="display:flex;flex-wrap:wrap;gap:.4rem"></div>
         </div>
       </section>
-    </aside>
+      <div class="side-sticky">
+      <div class="side-block">
+        <h4>Work with me</h4>
+        <p>One-on-one training, programming and nutrition coaching, offered through Best Fitness, Central Ave.</p>
+        <ul class="side-links">
+          <li><a href="#training">Personal training →</a></li>
+          <li><a href="#nutrition">Nutrition coaching →</a></li>
+          <li><a href="#blean">The BLean Challenge →</a></li>
+          <li><a href="#teams">Team sessions →</a></li>
+        </ul>
+        <a class="btn small" href="#coaching" style="width:fit-content">Book a free consult</a>
+      </div>
+      <div class="side-block">
+        <h4>Find me</h4>
+        <p>Best Fitness, 911 Central Ave, Albany, NY</p>
+        <ul class="side-links">
+          <li><a href="https://www.instagram.com/_izzyinmotion_/" target="_blank" rel="noopener">Instagram →</a></li>
+          <li><a href="https://izzyinmotion.substack.com" target="_blank" rel="noopener">Substack →</a></li>
+          <li><a href="https://strava.app.link/3x67eoUHh8b" target="_blank" rel="noopener">Strava →</a></li>
+        </ul>
+      </div>
+      </div>
+    </div></aside>
   </div>
 </section>
 
