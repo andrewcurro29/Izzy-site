@@ -822,18 +822,18 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <label>Sport<input id="t-sport" placeholder="e.g. Girls varsity soccer"></label>
       </div>
       <div class="row">
-        <label>Level<select id="t-level"><option>High school</option><option>College</option><option>Club / travel</option><option>Adult league</option></select></label>
-        <label>Roster size<input id="t-size" type="number" min="1" max="200" placeholder="24"></label>
+        <label>Level<select id="t-level"><option value="" selected>Select one</option><option>High school</option><option>College</option><option>Club / travel</option><option>Adult league</option></select></label>
+        <label>Roster size<input id="t-size" type="number" min="1" max="200"></label>
       </div>
       <fieldset><legend>Focus</legend><div class="checks">
         <label><input type="checkbox" id="t-f1"> Recovery yoga</label>
         <label><input type="checkbox" id="t-f2"> Mobility</label>
-        <label><input type="checkbox" id="t-f3"> Breathwork</label>
+        <label><input type="checkbox" id="t-f3"> HIIT conditioning</label>
         <label><input type="checkbox" id="t-f4"> Strength</label>
       </div></fieldset>
       <div class="row">
         <label>Preferred dates<input id="t-dates" placeholder="e.g. Week of Jan 12, after practice"></label>
-        <label>Location<select id="t-loc"><option>At our facility</option><option>At Best Fitness</option><option>Flexible</option></select></label>
+        <label>Location<select id="t-loc"><option value="" selected>Select one</option><option>At our facility</option><option>At Best Fitness</option><option>Flexible</option></select></label>
       </div>
       <label>Anything else?<textarea id="t-notes"></textarea></label>
       <button class="btn" type="submit">Request a session</button>
