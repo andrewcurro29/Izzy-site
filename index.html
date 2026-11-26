@@ -116,6 +116,7 @@ nav.main .btn{color:var(--on-moss);border-bottom:1px solid var(--moss)}
 .ph::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300' fill='none' stroke='%234F5E47' stroke-opacity='.22' stroke-width='1'%3E%3Cpath d='M-20 220 C 60 170 120 250 200 200 S 340 150 420 190'/%3E%3Cpath d='M-20 240 C 60 190 120 270 200 220 S 340 170 420 210'/%3E%3Cpath d='M-20 260 C 60 210 120 290 200 240 S 340 190 420 230'/%3E%3Cpath d='M-20 200 C 60 150 120 230 200 180 S 340 130 420 170'/%3E%3Ccircle cx='300' cy='80' r='34'/%3E%3Ccircle cx='300' cy='80' r='48'/%3E%3C/svg%3E");background-size:cover;background-position:center;opacity:.9}
 .ph figcaption,.ph .cap{position:absolute;left:.7rem;bottom:.7rem;right:.7rem;font-size:.74rem;letter-spacing:.04em;color:var(--ink);background:color-mix(in srgb,var(--paper) 82%,transparent);padding:.35rem .6rem;border-radius:3px;width:fit-content;max-width:calc(100% - 1.4rem)}
 .ph .cap::before{content:"Photo to add · ";color:var(--muted)}
+.ph.photo .cap::before{content:none}
 .ph.tall{aspect-ratio:4/5}.ph.wide{aspect-ratio:16/10}.ph.square{aspect-ratio:1}.ph.pano{aspect-ratio:21/9}
 figure{margin:0}
 .ph.photo{background:var(--ph-a)}
@@ -271,7 +272,7 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
 .gallery .ph{aspect-ratio:1;min-height:0}
 .gallery .ph:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-@media (max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery .ph:nth-child(1){aspect-ratio:1}.gallery .ph .cap{font-size:.68rem}}
 
 /* story */
 .story-hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.5rem,4vw,4rem);align-items:end;padding-block:clamp(2.5rem,6vw,4.5rem) 2rem}
@@ -791,11 +792,11 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <p class="lede">Yoga, mobility and recovery sessions built for athletes, from varsity rosters to college programs, offered through Best Fitness, Central Ave. I've led a hot yoga recovery session for the UAlbany women's soccer team at Best Fitness, and strength, conditioning and fueling sessions for Tamarac Girls Varsity Soccer, my own high school team, plus a restorative yoga session on the beach.</p>
   </div>
   <div class="wrap"><div class="gallery">
-    <figure class="ph"><span class="cap">UAlbany soccer yoga session</span></figure>
-    <figure class="ph"><span class="cap">Tamarac beach yoga</span></figure>
-    <figure class="ph"><span class="cap">Strength &amp; conditioning stations</span></figure>
-    <figure class="ph"><span class="cap">Fueling talk</span></figure>
-    <figure class="ph"><span class="cap">Group photo</span></figure>
+    <figure class="ph photo"><img src="img/team-beach.webp" alt="Izzy with the Tamarac girls soccer team on the beach after a restorative yoga session" loading="lazy" style="object-position:50% 50%"><span class="cap">Tamarac beach yoga</span></figure>
+    <figure class="ph photo"><img src="img/team-ualbany.webp" alt="Izzy outside the hot yoga studio at Best Fitness before the UAlbany women's soccer session" loading="lazy" style="object-position:50% 30%"><span class="cap">UAlbany soccer hot yoga</span></figure>
+    <figure class="ph photo"><img src="img/team-stations.webp" alt="Izzy leading Tamarac players through a conditioning drill in the gym" loading="lazy" style="object-position:50% 60%"><span class="cap">Strength &amp; conditioning stations</span></figure>
+    <figure class="ph photo"><img src="img/team-fueling.webp" alt="Tamarac players in the library for a talk on fueling as athletes" loading="lazy" style="object-position:50% 50%"><span class="cap">Fueling talk</span></figure>
+    <figure class="ph photo"><img src="img/team-group.webp" alt="Izzy with the Tamarac Girls Varsity Soccer team in the gym" loading="lazy" style="object-position:50% 75%"><span class="cap">Tamarac varsity soccer</span></figure>
   </div>
   <p style="margin-top:.8rem;color:var(--muted);font-weight:300">See more on Instagram: the <a href="https://www.instagram.com/bestfitnessclubs/reel/DbYKcy9NWPN/" target="_blank" rel="noopener">UAlbany hot yoga session</a>, the <a href="https://www.instagram.com/_izzyinmotion_/p/DObS2aPjbZS/" target="_blank" rel="noopener">Tamarac training session</a> and the <a href="https://www.instagram.com/tamarac_girlssoccer/p/DdMA1J2kfyc/" target="_blank" rel="noopener">Tamarac beach session</a> on Instagram.</p></div>
   <div class="wrap section split">
