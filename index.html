@@ -214,6 +214,7 @@ aside.side{display:grid;gap:2rem;align-content:start}
 .newsletter{background:var(--sage-soft);border-radius:var(--radius)}
 .newsletter .inner{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:clamp(1.5rem,4vw,3rem)}
 @media (max-width:760px){.newsletter .inner{grid-template-columns:1fr}}
+.newsletter.nl-inline{background:none;border-radius:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.newsletter.nl-inline .inner{grid-template-columns:240px minmax(0,1fr);gap:1.5rem;padding:1.8rem 0;align-items:start}@media (max-width:600px){.newsletter.nl-inline .inner{grid-template-columns:1fr;gap:1rem}}
 .nl-form{display:flex;gap:.6rem;flex-wrap:wrap}
 .nl-form input{flex:1 1 220px;min-width:0}
 aside.side{display:flex;flex-direction:column}
@@ -435,14 +436,14 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         </div>
       </article>
 
-      <section class="newsletter" id="newsletter-home">
+      <section class="newsletter nl-inline" id="newsletter-home">
         <div class="inner">
           <div style="display:grid;gap:.6rem">
             <span class="eyebrow">Free weekly newsletter</span>
-            <h3>Izzy in Motion</h3>
-            <p style="font-weight:300">Boots-on-the-ground notes from a fitness professional in Albany: habit building, sustainable tips, local events, trails and killer restaurants.</p>
+            <h3>Get Izzy in Motion by email</h3>
           </div>
           <div style="display:grid;gap:.8rem">
+          <p style="font-weight:300;color:var(--muted);margin:0">Boots-on-the-ground notes from a fitness professional in Albany: habit building, sustainable tips, local events, trails and killer restaurants.</p>
           <form class="nl-form" data-nl>
             <label class="sr" style="flex:1 1 220px">Email address<input type="email" id="nl-home" placeholder="you@email.com" required autocomplete="email"></label>
             <button class="btn" type="submit" style="align-self:end">Subscribe</button>
