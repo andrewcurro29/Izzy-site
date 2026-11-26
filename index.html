@@ -203,6 +203,10 @@ aside.side{display:grid;gap:2rem;align-content:start}
 .next-class{display:grid;gap:.2rem;padding:.9rem 1rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
 .next-class b{font-family:var(--f-display);font-size:1.3rem;font-weight:500}
 .next-class small{color:var(--muted)}
+.week-box{display:grid;gap:1rem;padding:1.4rem;background:var(--sage-soft);border-radius:var(--radius)}
+.week-box .next-class{border:0;border-top:3px solid var(--moss)}
+.week-box .next-class small:first-child{color:var(--moss);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.74rem}
+.week-box .feed-head a{color:var(--moss)}
 
 /* newsletter */
 .newsletter{background:var(--sage-soft);border-radius:var(--radius)}
@@ -479,7 +483,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <a href="#story">Read my story →</a></div>
       </div>
 
-      <section style="display:grid;gap:1rem">
+      <section class="week-box">
         <div class="feed-head"><h2>This week at Best Fitness</h2><a href="#classes">Full schedule →</a></div>
         <div id="nextClasses" style="display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
       </section>
