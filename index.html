@@ -273,7 +273,7 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
 .gallery .ph{aspect-ratio:1;min-height:0}
 .gallery .ph:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.gallery.team .ph,.gallery.team .ph:nth-child(1){grid-column:auto;grid-row:auto;aspect-ratio:auto}.gallery.team .cap{font-size:.72rem}@media (min-width:701px){.gallery.team{grid-template-columns:1fr 1fr 1.75fr 1fr 1fr;grid-auto-rows:clamp(165px,23vh,230px);grid-template-areas:"a b u c c" "d e u f g" "h i u j j"}.gallery.team .g-a{grid-area:a}.gallery.team .g-b{grid-area:b}.gallery.team .g-u{grid-area:u}.gallery.team .g-c{grid-area:c}.gallery.team .g-d{grid-area:d}.gallery.team .g-e{grid-area:e}.gallery.team .g-f{grid-area:f}.gallery.team .g-g{grid-area:g}.gallery.team .g-h{grid-area:h}.gallery.team .g-i{grid-area:i}.gallery.team .g-j{grid-area:j}}
+.gallery.team .ph,.gallery.team .ph:nth-child(1){grid-column:auto;grid-row:auto;aspect-ratio:auto}.gallery.team .cap{font-size:.62rem;letter-spacing:.06em;padding:.2rem .5rem;left:.45rem;bottom:.45rem;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - .9rem)}@media (min-width:701px){.gallery.team{grid-template-columns:1fr 1fr 1.75fr 1fr 1fr;grid-auto-rows:clamp(165px,23vh,230px);grid-template-areas:"a b u c c" "d e u f g" "h i u j j"}.gallery.team .g-a{grid-area:a}.gallery.team .g-b{grid-area:b}.gallery.team .g-u{grid-area:u}.gallery.team .g-c{grid-area:c}.gallery.team .g-d{grid-area:d}.gallery.team .g-e{grid-area:e}.gallery.team .g-f{grid-area:f}.gallery.team .g-g{grid-area:g}.gallery.team .g-h{grid-area:h}.gallery.team .g-i{grid-area:i}.gallery.team .g-j{grid-area:j}}
 @media (max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery .ph:nth-child(1){aspect-ratio:1}.gallery .ph .cap{font-size:.68rem}.gallery.team{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;grid-auto-flow:dense}.gallery.team .ph,.gallery.team .ph:nth-child(1){aspect-ratio:1}.gallery.team .ph.tall{grid-row:span 2;aspect-ratio:auto}.gallery.team .ph.wide{grid-column:span 2;aspect-ratio:2/1}}
 
 /* story */
@@ -988,6 +988,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <div style="display:grid;gap:.5rem">
         <h2 id="picksHead">My picks</h2>
         <p style="color:var(--muted);font-weight:300;max-width:62ch">The gear I actually use and recommend to clients, from my yoga mat to my race-day vest.</p>
+        <a class="btn small" style="width:fit-content" href="https://www.amazon.com/?tag=izzybisceglia-20&amp;linkCode=ll2&amp;language=en_US" target="_blank" rel="noopener sponsored">Shop on Amazon →</a>
       </div>
       <div class="chips" id="pickFilters" role="group" aria-label="Filter picks"></div>
       <div class="picks" id="picksGrid"></div>
@@ -1112,7 +1113,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   ];
 
   // Izzy's picks. Put her real tracking IDs here once the accounts are approved.
-  const AFFILIATE = { amazonTag: "izzybisceglia-20" };  // placeholder Amazon Associates tag
+  const AFFILIATE = { amazonTag: "izzybisceglia-20" };  // Izzy's Amazon Associates tag
   const amazon = q => "https://www.amazon.com/s?k="+encodeURIComponent(q)+"&tag="+AFFILIATE.amazonTag;
   // To link one exact product instead of a search, set url to "https://www.amazon.com/dp/ASIN?tag=" + AFFILIATE.amazonTag
   const PICKS = [
