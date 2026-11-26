@@ -296,6 +296,9 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .journey small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.3rem}
 .journey b{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:500;margin-bottom:.35rem}
 .journey span{display:block;color:var(--muted);font-weight:300}
+.moments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.moments .ph{aspect-ratio:4/5;min-height:0}
+@media (max-width:640px){.moments{grid-template-columns:repeat(2,minmax(0,1fr))}.moments .ph:last-child{grid-column:span 2;aspect-ratio:4/3}}
 .j-photos{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:.5rem;margin-top:.9rem;max-width:22rem}
 .journey li:nth-child(odd) .j-photos{margin-left:auto}
 .j-photos .ph{aspect-ratio:4/5;min-height:0}
@@ -585,9 +588,13 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <li><small>Portland, Maine</small><b>Shift Fitness</b><span>My first fitness job. Great mentors taught me how to personal train, and I learned it's about more than sets and reps. Clients often needed someone to listen as much as someone to coach them, and I found real fulfillment in being both.</span></li>
       <li><small>Portland, Maine</small><b>Portland Yoga Collective</b><span>I learned yoga here as a student and fell in love with the practice, the mindset and the physicality of it.</span></li>
       <li><small>Portland, Maine</small><b>Orangetheory Portland</b><span>Where I learned how to coach group fitness. I loved this community and the energy they brought to every class.</span></li>
-      <li><small>Niskayuna, New York</small><b>Orangetheory Niskayuna</b><span>I became Head Coach here. I hit my 1,000th coached class in June 2025, and co-led a packed Flexibility &amp; Mobility Workshop in January 2026.</span><div class="j-photos"><figure class="ph photo"><img src="img/story-workshop.webp" alt="Izzy and Coach Dylan in front of the Flexibility &amp; Mobility Workshop screen at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 70%"><span class="cap">Mobility workshop</span></figure><figure class="ph photo"><img src="img/story-1k.webp" alt="Izzy with her class celebrating her 1,000th coached class at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 45%"><span class="cap">1,000th class</span></figure></div></li>
-      <li><small>Albany, New York</small><b>Best Fitness</b><span>After moving to Albany, I earned my yoga, Pilates, nutrition and Body Tone certifications and joined Best Fitness on Central Ave in February 2026. Today I teach eleven classes a week and coach one-on-one, and I've been a Special Guest on NEWS10's Upstate Living.</span><div class="j-photos one"><figure class="ph photo"><img src="img/story-bestfit.webp" alt="Izzy flexing in front of the Best Fitness backdrop" loading="lazy" style="object-position:50% 35%"><span class="cap">Best Fitness, Central Ave</span></figure></div></li>
+      <li><small>Niskayuna, New York</small><b>Orangetheory Niskayuna</b><span>I became Head Coach here. I hit my 1,000th coached class in June 2025, went on to coach more than 2,000, and co-led a packed Flexibility &amp; Mobility Workshop in January 2026.</span></li>
+      <li><small>Albany, New York</small><b>Best Fitness</b><span>After moving to Albany, I earned my yoga, Pilates, nutrition and Body Tone certifications and joined Best Fitness on Central Ave in February 2026. Today I teach eleven classes a week and coach one-on-one, and I've been a Special Guest on NEWS10's Upstate Living.</span></li>
     </ol>
+  </div>
+  <div class="wrap section">
+    <h2 style="margin-bottom:1.2rem">Coaching moments</h2>
+    <div class="moments"><figure class="ph photo"><img src="img/story-workshop.webp" alt="Izzy and Coach Dylan in front of the Flexibility &amp; Mobility Workshop screen at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 70%"><span class="cap">Mobility workshop</span></figure><figure class="ph photo"><img src="img/story-1k.webp" alt="Izzy with her class celebrating her 1,000th coached class at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 45%"><span class="cap">1,000th class</span></figure><figure class="ph photo"><img src="img/story-bestfit.webp" alt="Izzy flexing in front of the Best Fitness backdrop" loading="lazy" style="object-position:50% 35%"><span class="cap">Best Fitness, Central Ave</span></figure></div>
   </div>
   <div class="wrap section miles">
     <div style="display:grid;gap:1rem">
@@ -1093,7 +1100,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     "For me, sports growing up were really about the team. I played soccer with the same group of girls at Tamarac from elementary school through high school, and our coach always stressed that we were a community first. We showed up for each other and picked one another up on the hard days, and that has stayed with me ever since.",
     "At 19, that changed. Two ACL and meniscus tears ended my college soccer career before I was ready to let it go. The months of rehab that followed were some of the hardest of my life, and they're where I learned how the body really works: how to rebuild strength, move well again and trust a knee that had let me down.",
     "Then came five years in Portland, Maine, the city I still call my second home. My first fitness job was as a personal trainer at Shift Fitness. Around the same time I started taking classes at Portland Yoga Collective, where I learned yoga and fell in love with the practice, the mindset and the physicality of it. From there I started coaching at Orangetheory in Portland.",
-    "When I moved back home to Troy, I kept coaching at Orangetheory studios around the Capital Region, became Head Coach in Niskayuna and coached my 1,000th class in June 2025. That October, after missing the first marathon I ever trained for, I crossed the finish line of the Maine Marathon in Portland.",
+    "When I moved back home to Troy, I kept coaching at Orangetheory studios around the Capital Region, became Head Coach in Niskayuna and coached my 1,000th class in June 2025, on the way to more than 2,000. That October, after missing the first marathon I ever trained for, I crossed the finish line of the Maine Marathon in Portland.",
     "After moving to Albany, I earned my yoga, Pilates, nutrition and Body Tone certifications, and in February 2026 I joined Best Fitness on Central Ave. Today I teach yoga, Pilates, Body Tone and BFitt:60 there and work one-on-one with people on their training and nutrition. A lot of them are in the middle of their own comeback, and I know what that feels like. My job is to meet you where you are and help you get a little stronger every week."
   ];
 
