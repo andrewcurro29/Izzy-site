@@ -239,6 +239,21 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .split > *{min-width:0}
 @media (max-width:820px){.split{grid-template-columns:1fr}}
 #coachForm{scroll-margin-top:5.5rem}
+.svc-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,6vw,5rem);align-items:center;padding-block:clamp(2.5rem,6vw,4.5rem) clamp(2.5rem,5vw,4rem)}
+.svc-hero h1{margin:.5rem 0 1.1rem}
+.svc-hero .lede{margin:0 0 1.8rem}
+.svc-hero .actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.svc-photo{position:relative;margin-right:1.4rem}
+.svc-photo::before{content:"";position:absolute;inset:1.6rem -1.4rem -1.4rem 1.6rem;background:var(--sage-soft);border-radius:var(--radius)}
+.svc-photo .ph{position:relative;aspect-ratio:4/5;margin:0}
+@media (max-width:820px){.svc-hero{grid-template-columns:1fr}.svc-photo{max-width:440px}}
+.svc-title{margin-bottom:1.4rem}
+.step-cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.step-cards li{display:grid;gap:.55rem;align-content:start;padding:1.7rem 1.5rem 1.8rem;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--sage);border-radius:var(--radius)}
+.step-cards li i{font-style:normal;font-family:var(--f-display);font-size:2.8rem;line-height:1;color:var(--sage)}
+.step-cards li b{font-family:var(--f-display);font-size:1.35rem;font-weight:500}
+.step-cards li span{color:var(--muted);font-weight:300}
+
 .about-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:1.6rem;align-items:center}
 .about-row .ph{aspect-ratio:4/5;margin:0}
 .about-text{display:grid;gap:.8rem}.about-text p{margin:0}
@@ -675,17 +690,22 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
 <!-- ================= TRAINING HOW ================= -->
 <section data-view="training">
-  <div class="wrap page-head">
-    <span class="eyebrow">Personal training</span>
-    <h1>How personal training works</h1>
-    <p class="lede">One-on-one training through Best Fitness, Central Ave, built around you.</p>
+  <div class="wrap svc-hero">
+    <div>
+      <span class="eyebrow">Personal training</span>
+      <h1>How personal training works</h1>
+      <p class="lede">One-on-one training through Best Fitness, Central Ave, built around you.</p>
+      <div class="actions"><a class="btn" href="#coaching" data-pick="Personal training">Sign up for personal training</a></div>
+    </div>
+    <div class="svc-photo"><figure class="ph photo"><img src="img/lift.webp" alt="Izzy setting up a barbell row in the weight room" loading="lazy"></figure></div>
   </div>
   <div class="wrap section" style="padding-top:0">
-    <ol class="timeline steps">
-      <li><b>1. Free consult</b><span>We talk through your goals, your schedule and any injuries or history I should know about.</span></li>
-      <li><b>2. Movement check</b><span>In our first session I see how you move, where you're strong and what needs work.</span></li>
-      <li><b>3. Your program</b><span>A plan built around your goals, whether that's getting stronger, coming back from an injury or getting ready for race day.</span></li>
-      <li><b>4. Train and progress</b><span>We train together at Best Fitness and adjust the plan as you get stronger.</span></li>
+    <h2 class="svc-title">Step by step</h2>
+    <ol class="step-cards">
+      <li><i>01</i><b>Free consult</b><span>We talk through your goals, your schedule and any injuries or history I should know about.</span></li>
+      <li><i>02</i><b>Movement check</b><span>In our first session I see how you move, where you're strong and what needs work.</span></li>
+      <li><i>03</i><b>Your program</b><span>A plan built around your goals, whether that's getting stronger, coming back from an injury or getting ready for race day.</span></li>
+      <li><i>04</i><b>Train and progress</b><span>We train together at Best Fitness and adjust the plan as you get stronger.</span></li>
     </ol>
     <div class="offer" style="text-align:center;padding:2.4rem 1.8rem;margin-top:2.4rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out to set up your free consult.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="Personal training">Sign up for personal training</a></div>
   </div>
@@ -693,17 +713,22 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
 <!-- ================= BLEAN HOW ================= -->
 <section data-view="blean">
-  <div class="wrap page-head">
-    <span class="eyebrow">The BLean Challenge</span>
-    <h1>How the BLean Challenge works</h1>
-    <p class="lede">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep.</p>
+  <div class="wrap svc-hero">
+    <div>
+      <span class="eyebrow">The BLean Challenge</span>
+      <h1>How the BLean Challenge works</h1>
+      <p class="lede">Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep.</p>
+      <div class="actions"><a class="btn" href="#coaching" data-pick="BLean Challenge">Sign up for the BLean Challenge</a></div>
+    </div>
+    <div class="svc-photo"><figure class="ph photo"><img src="img/chair.webp" alt="Izzy holding a deep chair pose in the studio" loading="lazy"></figure></div>
   </div>
   <div class="wrap section" style="padding-top:0">
-    <ol class="timeline steps">
-      <li><b>1. Join a round</b><span>Each round runs six weeks at Best Fitness. Message me for the next start date.</span></li>
-      <li><b>2. Learn your nutrition</b><span>Work with a coach to understand what you're eating now and what your body needs to fuel your training.</span></li>
-      <li><b>3. Train consistently</b><span>Mix personal training sessions with classes. Last round's winner, Josh, trained four times a week.</span></li>
-      <li><b>4. Keep the habits</b><span>Six weeks to learn it. A lifetime to use it.</span></li>
+    <h2 class="svc-title">Step by step</h2>
+    <ol class="step-cards">
+      <li><i>01</i><b>Join a round</b><span>Each round runs six weeks at Best Fitness. Message me for the next start date.</span></li>
+      <li><i>02</i><b>Learn your nutrition</b><span>Work with a coach to understand what you're eating now and what your body needs to fuel your training.</span></li>
+      <li><i>03</i><b>Train consistently</b><span>Mix personal training sessions with classes. Last round's winner, Josh, trained four times a week.</span></li>
+      <li><i>04</i><b>Keep the habits</b><span>Six weeks to learn it. A lifetime to use it.</span></li>
     </ol>
     <div class="offer" style="text-align:center;padding:2.4rem 1.8rem;margin-top:2.4rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out with the next start date.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="BLean Challenge">Sign up for the BLean Challenge</a></div>
   </div>
@@ -711,30 +736,30 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
 <!-- ================= NUTRITION ================= -->
 <section data-view="nutrition">
-  <div class="wrap page-head">
-    <span class="eyebrow">Nutrition coaching</span>
-    <h1>Eat for the life you're training for</h1>
-    <p class="lede">Nutrition coaching with me is offered through Best Fitness, Central Ave. No crash diets and no foods you're never allowed to eat again. Together we build simple habits that fuel your workouts, your recovery and your busy days, and that still work long after we're done.</p>
+  <div class="wrap svc-hero">
+    <div>
+      <span class="eyebrow">Nutrition coaching</span>
+      <h1>Eat for the life you're training for</h1>
+      <p class="lede">Nutrition coaching with me is offered through Best Fitness, Central Ave. No crash diets and no foods you're never allowed to eat again. Together we build simple habits that fuel your workouts, your recovery and your busy days, and that still work long after we're done.</p>
+      <div class="actions"><a class="btn" href="#coaching" data-pick="Nutrition coaching">Sign up for nutrition coaching</a></div>
+    </div>
+    <div class="svc-photo"><figure class="ph photo"><img src="img/nutrition.webp" alt="A bowl of homemade soup topped with arugula and shaved parmesan" loading="lazy"></figure></div>
   </div>
-  <div class="wrap section split" style="padding-top:0">
-    <div style="display:grid;gap:1.5rem">
-      <div class="cards" style="grid-template-columns:1fr">
+  <div class="wrap section" style="padding-top:0">
+    <h2 class="svc-title">What we work on</h2>
+    <div class="cards">
         <div class="offer"><span class="eyebrow">Food first</span><h3>Habits over rules</h3><p style="color:var(--muted);font-weight:300">We start with what you already eat and change a few things at a time: protein at every meal, more color on the plate, a plan for busy weeknights.</p></div>
         <div class="offer"><span class="eyebrow">Performance</span><h3>Fuel for how you move</h3><p style="color:var(--muted);font-weight:300">We plan what to eat and drink before you train or play, how to refuel after workouts, games and long runs, and what race week and race day look like.</p></div>
         <div class="offer"><span class="eyebrow">Accountability</span><h3>Someone in your corner</h3><p style="color:var(--muted);font-weight:300">Regular check-ins to see what's working, adjust what isn't, and keep you consistent when life gets busy.</p></div>
-      </div>
-    </div>
-    <div style="display:grid;gap:1.5rem;align-content:start">
-      <figure class="ph photo tall"><img src="img/nutrition.webp" alt="A bowl of homemade soup topped with arugula and shaved parmesan" loading="lazy"></figure>
     </div>
   </div>
   <div class="wrap section">
-    <h2 style="margin-bottom:1.2rem">How it works</h2>
-    <ol class="timeline steps">
-      <li><b>1. Free intro chat</b><span>Tell me about your goals, your schedule and how you eat now.</span></li>
-      <li><b>2. Your starting point</b><span>A few days of simple food notes so we can see your real patterns.</span></li>
-      <li><b>3. Your plan</b><span>Two or three habits to focus on first, built around your training, your work and the foods you actually like.</span></li>
-      <li><b>4. Check-ins</b><span>We review, adjust and add the next habit.</span></li>
+    <h2 class="svc-title">How it works</h2>
+    <ol class="step-cards">
+      <li><i>01</i><b>Free intro chat</b><span>Tell me about your goals, your schedule and how you eat now.</span></li>
+      <li><i>02</i><b>Your starting point</b><span>A few days of simple food notes so we can see your real patterns.</span></li>
+      <li><i>03</i><b>Your plan</b><span>Two or three habits to focus on first, built around your training, your work and the foods you actually like.</span></li>
+      <li><i>04</i><b>Check-ins</b><span>We review, adjust and add the next habit.</span></li>
     </ol>
   </div>
   <div class="wrap section">
