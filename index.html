@@ -154,6 +154,8 @@ figure{margin:0}
 .masonry button:hover img{transform:scale(1.02)}
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(18,22,17,.92);display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 3.5rem) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 2rem) max(16px,env(safe-area-inset-left,0px))}
 .lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius)}
+.lightbox video{max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius);background:#000}
+.gallery.team .ph{cursor:zoom-in}.gallery.team .ph:focus-visible{outline:2px solid var(--moss);outline-offset:2px}
 .lb-close{position:absolute;top:calc(env(safe-area-inset-top,0px) + .8rem);right:max(16px,env(safe-area-inset-right,0px));background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;padding:.4rem 1rem;font:inherit;cursor:pointer}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:2rem;width:2.8rem;height:2.8rem;border-radius:50%;cursor:pointer}
 .lb-prev{left:max(12px,env(safe-area-inset-left,0px))}.lb-next{right:max(12px,env(safe-area-inset-right,0px))}
@@ -1332,6 +1334,28 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   lb.addEventListener("click",e=>{ if(e.target===lb) closeLb(); });
   document.addEventListener("keydown",e=>{ if(lb.hidden) return; if(e.key==="Escape") closeLb(); if(e.key==="ArrowLeft") openLb(lbIndex-1); if(e.key==="ArrowRight") openLb(lbIndex+1); });
   renderGallery();
+  // ---------- Teams collage: tap to view full screen ----------
+  (function(){
+    const tiles=[...document.querySelectorAll(".gallery.team .ph")]; if(!tiles.length) return;
+    const box=el("div","lightbox"); box.hidden=true; box.setAttribute("role","dialog"); box.setAttribute("aria-modal","true"); box.setAttribute("aria-label","Team session media");
+    box.innerHTML='<button type="button" class="lb-close" aria-label="Close">Close</button><button type="button" class="lb-nav lb-prev" aria-label="Previous">‹</button><img alt="" hidden><video controls playsinline loop hidden></video><button type="button" class="lb-nav lb-next" aria-label="Next">›</button>';
+    document.body.appendChild(box);
+    const bImg=box.querySelector("img"), bVid=box.querySelector("video"), bClose=box.querySelector(".lb-close"); let at=0;
+    function open(i){ at=(i+tiles.length)%tiles.length; const t=tiles[at], v=t.querySelector("video"), im=t.querySelector("img");
+      bVid.pause();
+      if(v){ bImg.hidden=true; bVid.hidden=false; bVid.src=v.getAttribute("src"); bVid.poster=v.getAttribute("poster")||""; bVid.setAttribute("aria-label",v.getAttribute("aria-label")||""); bVid.muted=true; bVid.play().catch(()=>{}); }
+      else { bVid.hidden=true; bVid.removeAttribute("src"); bVid.load(); bImg.hidden=false; bImg.src=im.getAttribute("src"); bImg.alt=im.alt||""; }
+      box.hidden=false; document.documentElement.style.overflow="hidden"; bClose.focus(); }
+    function close(){ if(box.hidden) return; bVid.pause(); box.hidden=true; document.documentElement.style.overflow=""; tiles[at].focus(); }
+    tiles.forEach((t,i)=>{ t.tabIndex=0; t.setAttribute("role","button"); const m=t.querySelector("img,video"); t.setAttribute("aria-label","View full screen: "+((m&&(m.alt||m.getAttribute("aria-label")))||"photo"));
+      t.addEventListener("click",()=>open(i)); t.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(i); } }); });
+    bClose.addEventListener("click",close);
+    box.querySelector(".lb-prev").addEventListener("click",()=>open(at-1));
+    box.querySelector(".lb-next").addEventListener("click",()=>open(at+1));
+    box.addEventListener("click",e=>{ if(e.target===box) close(); });
+    document.addEventListener("keydown",e=>{ if(box.hidden) return; if(e.key==="Escape") close(); if(e.key==="ArrowLeft") open(at-1); if(e.key==="ArrowRight") open(at+1); });
+    window.addEventListener("hashchange",close);
+  })();
   fetch("gallery.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.photos&&d.photos.length){ GALLERY=d; renderGallery(); } }).catch(()=>{});
 
   // ---------- Router ----------
