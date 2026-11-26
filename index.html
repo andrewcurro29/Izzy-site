@@ -298,9 +298,10 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .journey small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.3rem}
 .journey b{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:500;margin-bottom:.35rem}
 .journey span{display:block;color:var(--muted);font-weight:300}
-.moments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.moments{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
 .moments .ph{aspect-ratio:4/5;min-height:0}
-@media (max-width:640px){.moments{grid-template-columns:repeat(2,minmax(0,1fr))}.moments .ph:last-child{grid-column:span 2;aspect-ratio:4/3}}
+.moments .cap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 1.2rem)}
+@media (max-width:640px){.moments{grid-template-columns:repeat(2,minmax(0,1fr))}.moments .cap{font-size:.62rem;letter-spacing:.06em;padding:.2rem .5rem;left:.45rem;bottom:.45rem;border-radius:999px;max-width:calc(100% - .9rem)}}
 .j-photos{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:.5rem;margin-top:.9rem;max-width:22rem}
 .journey li:nth-child(odd) .j-photos{margin-left:auto}
 .j-photos .ph{aspect-ratio:4/5;min-height:0}
@@ -596,7 +597,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
   <div class="wrap section">
     <h2 style="margin-bottom:1.2rem">Coaching moments</h2>
-    <div class="moments"><figure class="ph photo"><img src="img/story-workshop.webp" alt="Izzy and Coach Dylan in front of the Flexibility &amp; Mobility Workshop screen at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 70%"><span class="cap">Mobility workshop</span></figure><figure class="ph photo"><img src="img/story-1k.webp" alt="Izzy with her class celebrating her 1,000th coached class at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 45%"><span class="cap">1,000th class</span></figure><figure class="ph photo"><img src="img/story-bestfit.webp" alt="Izzy flexing in front of the Best Fitness backdrop" loading="lazy" style="object-position:50% 35%"><span class="cap">Best Fitness, Central Ave</span></figure></div>
+    <div class="moments"><figure class="ph photo"><img src="img/story-workshop.webp" alt="Izzy and Coach Dylan in front of the Flexibility &amp; Mobility Workshop screen at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 70%"><span class="cap">Mobility workshop</span></figure><figure class="ph photo"><img src="img/story-1k.webp" alt="Izzy with her class celebrating her 1,000th coached class at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 45%"><span class="cap">1,000th class</span></figure><figure class="ph photo"><img src="img/story-bestfit.webp" alt="Izzy flexing in front of the Best Fitness backdrop" loading="lazy" style="object-position:50% 35%"><span class="cap">Best Fitness, Central Ave</span></figure><figure class="ph photo"><img src="img/story-josh-blean.webp" alt="Josh holding his BLean Staff Winner check with Izzy and a teammate at Best Fitness" loading="lazy" style="object-position:50% 58%"><span class="cap">Josh's BLean win</span></figure></div>
   </div>
   <div class="wrap section miles">
     <div style="display:grid;gap:1rem">
