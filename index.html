@@ -296,6 +296,15 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .journey small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.3rem}
 .journey b{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:500;margin-bottom:.35rem}
 .journey span{display:block;color:var(--muted);font-weight:300}
+.j-photos{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:.5rem;margin-top:.9rem;max-width:22rem}
+.journey li:nth-child(odd) .j-photos{margin-left:auto}
+.j-photos .ph{aspect-ratio:4/5;min-height:0}
+.j-photos.one{max-width:18rem}.j-photos.one .ph{aspect-ratio:1}
+@media (max-width:700px){.journey li:nth-child(odd) .j-photos{margin-left:0}}
+.miles{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem;align-items:center}
+.miles-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.miles-photos .ph{aspect-ratio:4/5;min-height:0}
+@media (max-width:760px){.miles{grid-template-columns:1fr}}
 @media (max-width:700px){.journey::before{left:6px}.journey li,.journey li:nth-child(even){width:auto;margin-left:0;padding:0 0 2rem 2.2rem;text-align:left}.journey li::before,.journey li:nth-child(even)::before{left:0;right:auto}}
 @media (max-width:520px){.timeline li,.timeline.steps li{grid-template-columns:1fr;gap:.2rem}}
 
@@ -576,9 +585,20 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <li><small>Portland, Maine</small><b>Shift Fitness</b><span>My first fitness job. Great mentors taught me how to personal train, and I learned it's about more than sets and reps. Clients often needed someone to listen as much as someone to coach them, and I found real fulfillment in being both.</span></li>
       <li><small>Portland, Maine</small><b>Portland Yoga Collective</b><span>I learned yoga here as a student and fell in love with the practice, the mindset and the physicality of it.</span></li>
       <li><small>Portland, Maine</small><b>Orangetheory Portland</b><span>Where I learned how to coach group fitness. I loved this community and the energy they brought to every class.</span></li>
-      <li><small>Niskayuna, New York</small><b>Orangetheory Niskayuna</b><span>I became Head Coach here. I hit my 1,000th coached class in June 2025, and co-led a packed Flexibility &amp; Mobility Workshop in January 2026.</span></li>
-      <li><small>Albany, New York</small><b>Best Fitness</b><span>After moving to Albany, I earned my yoga, Pilates, nutrition and Body Tone certifications and joined Best Fitness on Central Ave in February 2026. Today I teach eleven classes a week and coach one-on-one, and I've been a Special Guest on NEWS10's Upstate Living.</span></li>
+      <li><small>Niskayuna, New York</small><b>Orangetheory Niskayuna</b><span>I became Head Coach here. I hit my 1,000th coached class in June 2025, and co-led a packed Flexibility &amp; Mobility Workshop in January 2026.</span><div class="j-photos"><figure class="ph photo"><img src="img/story-workshop.webp" alt="Izzy and Coach Dylan in front of the Flexibility &amp; Mobility Workshop screen at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 70%"><span class="cap">Mobility workshop</span></figure><figure class="ph photo"><img src="img/story-1k.webp" alt="Izzy with her class celebrating her 1,000th coached class at Orangetheory Niskayuna" loading="lazy" style="object-position:50% 45%"><span class="cap">1,000th class</span></figure></div></li>
+      <li><small>Albany, New York</small><b>Best Fitness</b><span>After moving to Albany, I earned my yoga, Pilates, nutrition and Body Tone certifications and joined Best Fitness on Central Ave in February 2026. Today I teach eleven classes a week and coach one-on-one, and I've been a Special Guest on NEWS10's Upstate Living.</span><div class="j-photos one"><figure class="ph photo"><img src="img/story-bestfit.webp" alt="Izzy flexing in front of the Best Fitness backdrop" loading="lazy" style="object-position:50% 35%"><span class="cap">Best Fitness, Central Ave</span></figure></div></li>
     </ol>
+  </div>
+  <div class="wrap section miles">
+    <div style="display:grid;gap:1rem">
+      <span class="eyebrow">Off the clock</span>
+      <h2>Still running</h2>
+      <p style="color:var(--muted);font-weight:300">Running the Troy Turkey Trot on Thanksgiving morning has been a family tradition since I was about 10. These days my dad and I run the 10K, then join the younger cousins for the 5K. A friend from run club talked me into the Stockadeathon 15K in Schenectady, and now it's on my race list every year.</p>
+    </div>
+    <div class="miles-photos">
+      <figure class="ph photo"><img src="img/story-turkeytrot.webp" alt="Izzy running the Troy Turkey Trot" loading="lazy" style="object-position:30% 40%"><span class="cap">Troy Turkey Trot</span></figure>
+      <figure class="ph photo"><img src="img/story-stockade.webp" alt="Izzy running the Stockadeathon 15K in Schenectady" loading="lazy" style="object-position:50% 40%"><span class="cap">Stockadeathon 15K</span></figure>
+    </div>
   </div>
   <div class="wrap section"><div class="cards">
     <div class="offer"><span class="eyebrow">Certifications</span><h4>Trained to coach every body</h4><ul><li>NASM Certified Personal Trainer</li><li>NASM Women's Fitness Specialist</li><li>AFAA Group Fitness Instructor</li><li>Pilates</li><li>Nutrition coaching</li></ul></div>
