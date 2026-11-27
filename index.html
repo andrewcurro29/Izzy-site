@@ -124,6 +124,7 @@ figure{margin:0}
 .ph.photo::before{display:none}
 .ph.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
 .ph.photo.top img{object-position:50% 20%}
+.ph.photo.mock img{object-position:50% 50%}
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
 .quote{display:grid;gap:1rem;padding:1.8rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);align-content:space-between}
 .quote p{font-family:var(--f-display);font-size:1.45rem;line-height:1.3;font-style:italic}
@@ -1089,7 +1090,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
 
   const SHOP = {
     shopArt:[{t:"Original painting",p:"One of a kind",c:"Artwork piece"},{t:"Art print",p:"Limited run",c:"Framed print"},{t:"Greeting cards",p:"Set of 6",c:"Card set"}],
-    shopMerch:[{t:"Izzy in Motion tee",p:"Coming soon",c:"T-shirt"},{t:"Run club hat",p:"Coming soon",c:"Hat"},{t:"Water bottle",p:"Coming soon",c:"Bottle"}],
+    shopMerch:[{t:"Izzy in Motion tee",p:"Coming soon",c:"T-shirt",img:"img/merch-tee.webp"},{t:"Run club hat",p:"Coming soon",c:"Hat",img:"img/merch-hat.webp"},{t:"Water bottle",p:"Coming soon",c:"Bottle",img:"img/merch-bottle.webp"}],
     shopOils:[{t:"Post-workout blend",p:"Coming soon",c:"Oil bottle"},{t:"Calm & sleep blend",p:"Coming soon",c:"Diffuser"},{t:"Starter kit",p:"Coming soon",c:"Kit"}]
   };
 
@@ -1222,7 +1223,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     const box=$("#"+id);
     SHOP[id].forEach((p,i)=>{
       const card=el("div","card product");
-      card.innerHTML='<figure class="ph"><span class="cap">'+esc(p.c)+'</span></figure><h4>'+esc(p.t)+'</h4><span class="price">'+esc(p.p)+'</span>';
+      card.innerHTML=(p.img?'<figure class="ph photo mock"><img src="'+p.img+'" alt="'+esc(p.t)+' mockup with Izzy\'s artwork" loading="lazy"></figure>':'<figure class="ph"><span class="cap">'+esc(p.c)+'</span></figure>')+'<h4>'+esc(p.t)+'</h4><span class="price">'+esc(p.p)+'</span>';
       const b=el("button","btn small ghost","Notify me"); b.type="button"; b.id="notify-"+id+"-"+i;
       b.addEventListener("click",()=>{ b.textContent="You're on the list"; b.disabled=true; b.style.opacity=.7; });
       card.appendChild(b); box.appendChild(card);
