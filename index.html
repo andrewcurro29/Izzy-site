@@ -62,7 +62,7 @@ p{margin:0}
 .lede{font-size:var(--step-1);font-weight:300;color:var(--muted);max-width:60ch}
 .prose{max-width:66ch;display:grid;gap:1.15em}
 .prose p{font-size:1.08rem;font-weight:300}
-.btn{display:inline-flex;align-items:center;gap:.5em;padding:.8em 1.4em;border-radius:999px;background:var(--moss);color:var(--on-moss);text-decoration:none;font-weight:500;font-size:.95rem;letter-spacing:.02em;border:1px solid var(--moss);cursor:pointer;font-family:var(--f-body)}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.8em 1.4em;border-radius:999px;background:var(--moss);color:var(--on-moss);text-decoration:none;font-weight:500;font-size:.95rem;letter-spacing:.02em;border:1px solid var(--moss);cursor:pointer;font-family:var(--f-body);text-align:center;justify-content:center;line-height:1.3}
 .btn:hover{filter:brightness(1.08)}
 .btn.ghost{background:transparent;color:var(--moss)}
 .btn.small{padding:.55em 1.1em;font-size:.88rem}
@@ -420,7 +420,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <h1>Movement for every body, <em>stronger together.</em></h1>
       <p class="lede">I'm Izzy. Whether you're brand new, coming back from an injury or training for your next race, I'll meet you where you are. Find me teaching yoga, Pilates, Body Tone and BFitt:60 at Best Fitness on Central Ave, where I also offer one-on-one training and nutrition coaching.</p>
       <div class="actions">
-        <a class="btn" href="#coaching" data-consult>Book a free 60-minute consult</a>
+        <a class="btn" href="#coaching" data-consult>Book a complimentary 60-minute consult</a>
         <a class="btn ghost" href="#classes">See my classes</a>
       </div>
       <p style="margin:0;font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:.4rem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Albany, NY · Best Fitness, 911 Central Ave</p>
@@ -537,7 +537,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
           <li><a href="#blean">The BLean Challenge →</a></li>
           <li><a href="#teams">Team sessions →</a></li>
         </ul>
-        <a class="btn small" href="#coaching" style="width:fit-content">Book a free 60-minute consult</a>
+        <a class="btn small" href="#coaching" style="width:fit-content">Book a complimentary 60-minute consult</a>
       </div>
       <div class="side-block">
         <h4>Find me</h4>
@@ -686,7 +686,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <figure class="ph photo wide top"><img src="img/strength.webp" alt="Izzy smiling and flexing in the squat rack at Best Fitness" loading="lazy"></figure>
     </div>
     <form class="form" id="coachForm" data-form="coaching">
-      <h3 id="consultHead">Book a free 60-minute consult</h3>
+      <h3 id="consultHead">Book a complimentary 60-minute consult</h3>
       <div class="row">
         <label>Name<input id="c-name" required autocomplete="name"></label>
         <label>Email<input id="c-email" type="email" required autocomplete="email"></label>
@@ -742,12 +742,12 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap section">
     <h2 class="svc-title">Step by step</h2>
     <ol class="step-cards">
-      <li><i>01</i><b>Free 60-minute consult</b><span>We talk through your goals, your schedule and any injuries or history I should know about.</span></li>
+      <li><i>01</i><b>Complimentary 60-minute consult</b><span>We talk through your goals, your schedule and any injuries or history I should know about.</span></li>
       <li><i>02</i><b>Movement check</b><span>In our first session I see how you move, where you're strong and what needs work.</span></li>
       <li><i>03</i><b>Your program</b><span>A plan built around your goals, whether that's getting stronger, coming back from an injury or getting ready for race day.</span></li>
       <li><i>04</i><b>Train and progress</b><span>We train together at Best Fitness and adjust the plan as you get stronger.</span></li>
     </ol>
-    <div class="offer" style="text-align:center;padding:2.4rem 1.8rem;margin-top:2.4rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out to set up your free 60-minute consult.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="Personal training">Sign up for personal training</a></div>
+    <div class="offer" style="text-align:center;padding:2.4rem 1.8rem;margin-top:2.4rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out to set up your complimentary 60-minute consult.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="Personal training">Sign up for personal training</a></div>
   </div>
 </section>
 
@@ -796,14 +796,14 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   <div class="wrap section">
     <h2 class="svc-title">How it works</h2>
     <ol class="step-cards">
-      <li><i>01</i><b>Free 60-minute consult</b><span>Tell me about your goals, your schedule and how you eat now.</span></li>
+      <li><i>01</i><b>Complimentary 60-minute intro chat</b><span>Tell me about your goals, your schedule and how you eat now.</span></li>
       <li><i>02</i><b>Your starting point</b><span>A few days of simple food notes so we can see your real patterns.</span></li>
       <li><i>03</i><b>Your plan</b><span>Two or three habits to focus on first, built around your training, your work and the foods you actually like.</span></li>
       <li><i>04</i><b>Check-ins</b><span>We review, adjust and add the next habit.</span></li>
     </ol>
   </div>
   <div class="wrap section">
-    <div class="offer" style="text-align:center;padding:2.4rem 1.8rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out to set up your free 60-minute consult.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="Nutrition coaching">Sign up for nutrition coaching</a></div>
+    <div class="offer" style="text-align:center;padding:2.4rem 1.8rem"><h2 style="margin-bottom:.6rem">Ready to start?</h2><p style="color:var(--muted);font-weight:300;max-width:34rem;margin:0 auto 1.4rem">Sign up and I'll reach out to set up your complimentary 60-minute intro chat.</p><a class="btn" style="justify-self:center" href="#coaching" data-pick="Nutrition coaching">Sign up for nutrition coaching</a></div>
     <div class="offer" style="margin-top:1.4rem;background:var(--sage-soft);border-color:transparent"><p style="margin:0"><strong>Offered through Best Fitness.</strong> All personal training, programming and nutrition coaching with me is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></div>
     <p class="note" style="margin-top:1.4rem;color:var(--muted);font-weight:300">Nutrition coaching focuses on everyday habits and fueling for performance. It isn't medical nutrition therapy. If you have a medical condition, an eating disorder history or are pregnant, I'm happy to work alongside your doctor or a registered dietitian.</p>
   </div>
@@ -1285,7 +1285,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   };
   // Every form emails Izzy through FormSubmit (formsubmit.co). Change the address here if it ever changes.
   const IZZY_EMAIL = ["ibisceglia8","gmail.com"].join("@");
-  const SUBJECTS = {coaching:"Free 60-minute consult request",teams:"Team session inquiry",retreats:"Retreat list sign-up",runs:"Run club sign-up",shop:"Made by Izzy: first dibs",contact:"New message"};
+  const SUBJECTS = {coaching:"Complimentary 60-minute consult request",teams:"Team session inquiry",retreats:"Retreat list sign-up",runs:"Run club sign-up",shop:"Made by Izzy: first dibs",contact:"New message"};
   const ce=$("#contactEmail"); if(ce){ ce.href="mailto:"+IZZY_EMAIL; ce.textContent=IZZY_EMAIL; }
   function formFields(f){
     const d={};
