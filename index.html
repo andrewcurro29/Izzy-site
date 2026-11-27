@@ -307,6 +307,7 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .journey small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.3rem}
 .journey b{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:500;margin-bottom:.35rem}
 .journey span{display:block;color:var(--muted);font-weight:300}
+.art-peek{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;max-width:760px;align-items:start}.art-peek .ph{aspect-ratio:auto;min-height:0;background:none}.art-peek .ph img{position:static!important;display:block;width:100%;height:auto!important}
 .moments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
 .moments .ph{aspect-ratio:4/5;min-height:0}
 .moments .cap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 1.2rem)}
@@ -965,7 +966,9 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <h2 id="madeHead">Handmade, small batch</h2>
         <p style="color:var(--muted);font-weight:300;max-width:62ch">Original art, Izzy in Motion merch and wellness blends I make myself. Tap Notify me on anything you'd like, or join the list below to hear when each drop is ready.</p>
       </div>
-      <div><h3 style="margin-bottom:1rem">Artwork</h3><div class="cards" id="shopArt"></div></div>
+      <div><h3 style="margin-bottom:.4rem">Artwork</h3><p style="color:var(--muted);font-weight:300;margin:0 0 1rem;max-width:62ch">A peek at what I'm working on: yoga poses drawn as plants, in ink and watercolor.</p>
+        <div class="art-peek"><figure class="ph photo"><img src="img/art-poses.webp" alt="Watercolor sketchbook page of plants and flowers drawn in yoga poses" loading="lazy"><span class="cap">Poses as plants</span></figure><figure class="ph photo"><img src="img/art-plants.webp" alt="Watercolor study page of hydrangea, lavender, sage and pothos with a list of poses" loading="lazy"><span class="cap">Plant studies</span></figure></div>
+        <div class="cards" id="shopArt" style="margin-top:1.2rem"></div></div>
       <div><h3 style="margin-bottom:1rem">Merch</h3><div class="cards" id="shopMerch"></div></div>
       <div><h3 style="margin-bottom:1rem">Wellness &amp; essential oils</h3><div class="cards" id="shopOils"></div></div>
       <form class="form" data-form="shop" id="shopForm" style="max-width:640px">
