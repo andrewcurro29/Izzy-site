@@ -1,98 +1,14 @@
 {
- "updated": "2026-11-23T02:38:20.501Z",
+ "updated": "2026-11-27T10:59:57.072Z",
  "source": "https://bestfitnessgyms.com/albany-ny-central/group-fitness/class-schedule/",
  "instructor": "Isabella Bisceglia",
  "location": "Best Fitness Albany, 911 Central Ave",
  "classes": [
   {
-   "title": "BFITT Burn",
-   "start": "2026-11-21T07:00",
-   "end": "2026-11-21T08:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NjEwODJjYTAzZWM3NDdhY2JiOGJhNmRkYzUxOGYwYzIsY2x1Yj04MDg1LHN0YXJ0PTExLzIxLzIwMjYsZW5kPTExLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIx"
-  },
-  {
-   "title": "BFITT Burn",
-   "start": "2026-11-21T08:00",
-   "end": "2026-11-21T09:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NmU3MzBhMGEwOTMzNDU3NjhkNDZmYzY3YjQ0N2Y3MWEsY2x1Yj04MDg1LHN0YXJ0PTExLzIxLzIwMjYsZW5kPTExLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIx"
-  },
-  {
-   "title": "Pilates",
-   "start": "2026-11-21T09:00",
-   "end": "2026-11-21T10:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YzM3MjhlZWJjZWY4NGE1M2JkYzBhZjM0NjczOGU0NjcsY2x1Yj04MDg1LHN0YXJ0PTExLzIxLzIwMjYsZW5kPTExLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIx"
-  },
-  {
-   "title": "YOGA.",
-   "start": "2026-11-21T10:00",
-   "end": "2026-11-21T11:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9OTg2ZmU4ZGE5YWM4NDc4MWE2ODc2MWRmZjMyNjIwNjEsY2x1Yj04MDg1LHN0YXJ0PTExLzIxLzIwMjYsZW5kPTExLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIx"
-  },
-  {
-   "title": "Yoga90",
-   "start": "2026-11-21T11:00",
-   "end": "2026-11-21T12:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZjkxYjVkN2JkMDZkNDJkYTlhZTliNjc4NTU4MDRmNDUsY2x1Yj04MDg1LHN0YXJ0PTExLzIxLzIwMjYsZW5kPTExLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIx"
-  },
-  {
-   "title": "Yoga90",
-   "start": "2026-11-23T09:00",
-   "end": "2026-11-23T10:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MzgyNDM1ZmZiNjVlNDkxMWFjMjQwZDJlODIwMWFjMzMsY2x1Yj04MDg1LHN0YXJ0PTExLzIzLzIwMjYsZW5kPTExLzIzLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIz"
-  },
-  {
-   "title": "BFITT Strength",
-   "start": "2026-11-23T16:30",
-   "end": "2026-11-23T17:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YWViMzIyNmIyMjg1NDJkMzg4MTIzODlhMDJlMjEzN2IsY2x1Yj04MDg1LHN0YXJ0PTExLzIzLzIwMjYsZW5kPTExLzIzLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIz"
-  },
-  {
-   "title": "BFITT Strength",
-   "start": "2026-11-23T17:30",
-   "end": "2026-11-23T18:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9OTU2YmU2NzcyNzJkNDc5MjgwMjZhZGFhNWU0OTZiMzQsY2x1Yj04MDg1LHN0YXJ0PTExLzIzLzIwMjYsZW5kPTExLzIzLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTIz"
-  },
-  {
-   "title": "BodyTone",
-   "start": "2026-11-24T09:30",
-   "end": "2026-11-24T10:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MGY4NWEzNmE3YjJlNDJmYWJlNjA2MWE2ZjZjNGFmNmIsY2x1Yj04MDg1LHN0YXJ0PTExLzI0LzIwMjYsZW5kPTExLzI0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI0"
-  },
-  {
-   "title": "BFITT Burn",
-   "start": "2026-11-24T16:30",
-   "end": "2026-11-24T17:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9Yjg0Yjg4MTNjYzJhNDE4Yjk0YzEyZDQ4MmI4NzM4N2MsY2x1Yj04MDg1LHN0YXJ0PTExLzI0LzIwMjYsZW5kPTExLzI0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI0"
-  },
-  {
-   "title": "BFITT Burn",
-   "start": "2026-11-24T17:30",
-   "end": "2026-11-24T18:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ODQ4NGFjMzI5NDRiNDE1NWFhNjliNjQ5YzU4MjQ3ZTUsY2x1Yj04MDg1LHN0YXJ0PTExLzI0LzIwMjYsZW5kPTExLzI0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI0"
-  },
-  {
-   "title": "BFITT Strength",
-   "start": "2026-11-25T09:30",
-   "end": "2026-11-25T10:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NmE1MTI4MDdlYjNlNGYyZDkyOTUzOTE5MDY1YzFkN2MsY2x1Yj04MDg1LHN0YXJ0PTExLzI1LzIwMjYsZW5kPTExLzI1LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI1"
-  },
-  {
    "title": "Yoga90",
    "start": "2026-11-25T17:00",
    "end": "2026-11-25T18:00",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9Y2QxZWY0Y2VmM2JhNGM4MDgwNTZjM2M0NTAzMWU5MWUsY2x1Yj04MDg1LHN0YXJ0PTExLzI1LzIwMjYsZW5kPTExLzI1LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI1"
-  },
-  {
-   "title": "Pilates",
-   "start": "2026-11-26T09:00",
-   "end": "2026-11-26T10:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MTVmMGYyMDk1NGU4NGRmN2FjYTA0ZDM2Y2ZjMDcwMjYsY2x1Yj04MDg1LHN0YXJ0PTExLzI2LzIwMjYsZW5kPTExLzI2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI2"
-  },
-  {
-   "title": "BodyTone",
-   "start": "2026-11-26T10:00",
-   "end": "2026-11-26T11:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9OGEzOTEzNWQ4OGM4NDFjZTg3MzYwZGRmOWJkYjBkNGUsY2x1Yj04MDg1LHN0YXJ0PTExLzI2LzIwMjYsZW5kPTExLzI2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTI2"
   },
   {
    "title": "BFITT Burn",
@@ -132,14 +48,14 @@
   },
   {
    "title": "BFITT Strength",
-   "start": "2026-11-30T17:00",
-   "end": "2026-11-30T18:00",
+   "start": "2026-11-30T16:30",
+   "end": "2026-11-30T17:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MjVmNTEyNWNiMWExNGVjYzg1ZjA5MmExYjVlMmVlYzUsY2x1Yj04MDg1LHN0YXJ0PTExLzMwLzIwMjYsZW5kPTExLzMwLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTMw"
   },
   {
    "title": "BFITT Strength",
-   "start": "2026-11-30T18:00",
-   "end": "2026-11-30T19:00",
+   "start": "2026-11-30T17:30",
+   "end": "2026-11-30T18:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9OTBiYzI1MWFhNTkyNDc0M2EwY2U5ZDMzYzNlYjAwMTAsY2x1Yj04MDg1LHN0YXJ0PTExLzMwLzIwMjYsZW5kPTExLzMwLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTExLTMw"
   },
   {
@@ -150,15 +66,21 @@
   },
   {
    "title": "BFITT Burn",
-   "start": "2026-12-01T17:00",
-   "end": "2026-12-01T18:00",
+   "start": "2026-12-01T16:30",
+   "end": "2026-12-01T17:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZDIxZGJhOTBiN2JjNDJhNDhhZjQ1YzVmNmYzZTAyZmYsY2x1Yj04MDg1LHN0YXJ0PTEyLzEvMjAyNixlbmQ9MTIvMS8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi0x"
   },
   {
    "title": "BFITT Burn",
-   "start": "2026-12-01T18:00",
-   "end": "2026-12-01T19:00",
+   "start": "2026-12-01T17:30",
+   "end": "2026-12-01T18:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZWMwYTQ5OWU2NjNhNGExMjgzZDdmYTk4OGM0ZjA5MDQsY2x1Yj04MDg1LHN0YXJ0PTEyLzEvMjAyNixlbmQ9MTIvMS8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi0x"
+  },
+  {
+   "title": "BFITT Strength",
+   "start": "2026-12-02T09:30",
+   "end": "2026-12-02T10:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MTMwNzVkZjg0M2MxNDQzOGFiYTdmZGFmZTY3ZjAzZWUsY2x1Yj04MDg1LHN0YXJ0PTEyLzIvMjAyNixlbmQ9MTIvMi8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi0y"
   },
   {
    "title": "Yoga90",
@@ -185,21 +107,15 @@
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YWQxZDFmM2RjNzg2NGJjZmJlYzAzZGUwOWEyOGI2ZGIsY2x1Yj04MDg1LHN0YXJ0PTEyLzUvMjAyNixlbmQ9MTIvNS8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi01"
   },
   {
-   "title": "Pilates",
-   "start": "2026-12-05T09:00",
-   "end": "2026-12-05T10:00",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZTgxZjAyZGJiMTNmNDg4ZjkxMDc4YmRmNjVkYmEwYzUsY2x1Yj04MDg1LHN0YXJ0PTEyLzUvMjAyNixlbmQ9MTIvNS8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi01"
-  },
-  {
    "title": "BFITT Strength",
-   "start": "2026-12-07T17:00",
-   "end": "2026-12-07T18:00",
+   "start": "2026-12-07T16:30",
+   "end": "2026-12-07T17:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZDcyOTk3NzY0ZjQzNGZiMWE5OWNhMzRhOGQ3OTMyYTIsY2x1Yj04MDg1LHN0YXJ0PTEyLzcvMjAyNixlbmQ9MTIvNy8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi03"
   },
   {
    "title": "BFITT Strength",
-   "start": "2026-12-07T18:00",
-   "end": "2026-12-07T19:00",
+   "start": "2026-12-07T17:30",
+   "end": "2026-12-07T18:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZTY4Nzg5MjQzZWRhNDliOTg0ZDQ5MjMxMDk4MWJiNWUsY2x1Yj04MDg1LHN0YXJ0PTEyLzcvMjAyNixlbmQ9MTIvNy8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi03"
   },
   {
@@ -210,15 +126,21 @@
   },
   {
    "title": "BFITT Burn",
-   "start": "2026-12-08T17:00",
-   "end": "2026-12-08T18:00",
+   "start": "2026-12-08T16:30",
+   "end": "2026-12-08T17:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NjVkNWViZThiNzA4NGE4NDhmMzRjNjBkZTE4MTg1YTAsY2x1Yj04MDg1LHN0YXJ0PTEyLzgvMjAyNixlbmQ9MTIvOC8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi04"
   },
   {
    "title": "BFITT Burn",
-   "start": "2026-12-08T18:00",
-   "end": "2026-12-08T19:00",
+   "start": "2026-12-08T17:30",
+   "end": "2026-12-08T18:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9N2QwNTE2MGJmMWE0NDM0MGFkNzk0OThjMjFlNmQ2Y2UsY2x1Yj04MDg1LHN0YXJ0PTEyLzgvMjAyNixlbmQ9MTIvOC8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi04"
+  },
+  {
+   "title": "BFITT Strength",
+   "start": "2026-12-09T09:30",
+   "end": "2026-12-09T10:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YWFiYWJlMGM0YzUxNDY1MGI0MzIyOTc3NTZjZTc3M2YsY2x1Yj04MDg1LHN0YXJ0PTEyLzkvMjAyNixlbmQ9MTIvOS8yMDI2LG1vZGU9bW9udGgsc2VsZWN0ZWREYXk9MjAyNi0xMi05"
   },
   {
    "title": "Yoga90",
@@ -257,16 +179,40 @@
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YWRjNmM1MjU4NDIwNGM1YThlZTljMjA5NWE4M2JhMWQsY2x1Yj04MDg1LHN0YXJ0PTEyLzE0LzIwMjYsZW5kPTEyLzE0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE0"
   },
   {
-   "title": "BFITT Strength",
+   "title": "BFITT Burn",
    "start": "2026-12-14T16:30",
    "end": "2026-12-14T17:30",
-   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZTZhMzdmZThmMGIwNDZiOTliYmNkODU5OGM2ODlmNDksY2x1Yj04MDg1LHN0YXJ0PTEyLzE0LzIwMjYsZW5kPTEyLzE0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE0"
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MmJhODgxZDMzYjBjNGQyNDliY2Q5NjI4NjYyOTQ1N2MsY2x1Yj04MDg1LHN0YXJ0PTEyLzE0LzIwMjYsZW5kPTEyLzE0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE0"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-14T17:30",
+   "end": "2026-12-14T18:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9M2RhZmEyOTMzMTE0NGExZThkMzQ1ZTAwMWFiZTAzNWQsY2x1Yj04MDg1LHN0YXJ0PTEyLzE0LzIwMjYsZW5kPTEyLzE0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE0"
   },
   {
    "title": "BodyTone",
    "start": "2026-12-15T09:30",
    "end": "2026-12-15T10:30",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MWI1OTg2MWNiMzQ2NGVmNWJhNzJiMGFiNDViOTUxYzMsY2x1Yj04MDg1LHN0YXJ0PTEyLzE1LzIwMjYsZW5kPTEyLzE1LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE1"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-15T16:30",
+   "end": "2026-12-15T17:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NmRjMzVlMTY4ZjU0NDVkODg0MmUxNGNjMDc5YTE0YTcsY2x1Yj04MDg1LHN0YXJ0PTEyLzE1LzIwMjYsZW5kPTEyLzE1LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE1"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-15T17:30",
+   "end": "2026-12-15T18:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MzIzYzMxZmRmYjg3NDQxY2EzNGJhZTdjNWM1ZjYwNmUsY2x1Yj04MDg1LHN0YXJ0PTEyLzE1LzIwMjYsZW5kPTEyLzE1LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE1"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-16T09:30",
+   "end": "2026-12-16T10:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9OGJmMTE4NGE2NmQwNDA2ODg1ZTZjZWJlYjQ5MmRlMTYsY2x1Yj04MDg1LHN0YXJ0PTEyLzE2LzIwMjYsZW5kPTEyLzE2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE2"
   },
   {
    "title": "Yoga90",
@@ -279,6 +225,18 @@
    "start": "2026-12-17T09:00",
    "end": "2026-12-17T10:00",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MDg0OWFkMmQyZGQ0NDA3NGJjODhhNGIxNGRhZDBkMjUsY2x1Yj04MDg1LHN0YXJ0PTEyLzE3LzIwMjYsZW5kPTEyLzE3LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE3"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-19T07:00",
+   "end": "2026-12-19T08:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YTFjZTRlNTEzODQ0NGM0MTkzOTBmNTA2N2MzMmE2OTYsY2x1Yj04MDg1LHN0YXJ0PTEyLzE5LzIwMjYsZW5kPTEyLzE5LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE5"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-19T08:00",
+   "end": "2026-12-19T09:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NGQwOGUxMDliY2Q2NGU1ZjljMzhmZWI1NGI4MmM2MjAsY2x1Yj04MDg1LHN0YXJ0PTEyLzE5LzIwMjYsZW5kPTEyLzE5LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE5"
   },
   {
    "title": "Pilates",
@@ -297,6 +255,78 @@
    "start": "2026-12-19T11:00",
    "end": "2026-12-19T12:00",
    "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MWJkZjk4ODc0NTA4NDE0Nzg5ZGJiMTk2MTM2NjIwNWQsY2x1Yj04MDg1LHN0YXJ0PTEyLzE5LzIwMjYsZW5kPTEyLzE5LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTE5"
+  },
+  {
+   "title": "Yoga90",
+   "start": "2026-12-21T09:00",
+   "end": "2026-12-21T10:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YWVmMWMxMjA0ZmU2NGIyOGFkOGYyNDc3NjhiYzNkMWYsY2x1Yj04MDg1LHN0YXJ0PTEyLzIxLzIwMjYsZW5kPTEyLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIx"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-21T16:30",
+   "end": "2026-12-21T17:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZjkwYWY3YzY1MzcwNDY0Y2I0MDVkN2M0NmZjYjk4ZDEsY2x1Yj04MDg1LHN0YXJ0PTEyLzIxLzIwMjYsZW5kPTEyLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIx"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-21T17:30",
+   "end": "2026-12-21T18:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YTBjYzYwOGFlYmM0NGJhMmI0MDcwODY2Njk0NWI4NTcsY2x1Yj04MDg1LHN0YXJ0PTEyLzIxLzIwMjYsZW5kPTEyLzIxLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIx"
+  },
+  {
+   "title": "BodyTone",
+   "start": "2026-12-22T09:30",
+   "end": "2026-12-22T10:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZDg0ZjAzM2JmZGEzNDYxOGI3MjcyMTJhYmFhMDdmNTgsY2x1Yj04MDg1LHN0YXJ0PTEyLzIyLzIwMjYsZW5kPTEyLzIyLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIy"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-22T16:30",
+   "end": "2026-12-22T17:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MzNkYTYyMDVhY2Y5NDEzZDgxN2Y5MmIzMTBlYjAzMmYsY2x1Yj04MDg1LHN0YXJ0PTEyLzIyLzIwMjYsZW5kPTEyLzIyLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIy"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-22T17:30",
+   "end": "2026-12-22T18:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YzYwYTRmYjNkNmFlNGI3NzgyMDA3MjRmZDA4NGM4NTQsY2x1Yj04MDg1LHN0YXJ0PTEyLzIyLzIwMjYsZW5kPTEyLzIyLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIy"
+  },
+  {
+   "title": "BFITT Burn",
+   "start": "2026-12-23T09:30",
+   "end": "2026-12-23T10:30",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MjRmZjMzNjRjNTkwNGIwYzk0NDQzYmI3OTFiMDVlNGYsY2x1Yj04MDg1LHN0YXJ0PTEyLzIzLzIwMjYsZW5kPTEyLzIzLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIz"
+  },
+  {
+   "title": "Yoga90",
+   "start": "2026-12-23T17:00",
+   "end": "2026-12-23T18:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9NGYxYTliMjE1YTYxNDM0NGI0Y2RhNzMyZTIxNzJhYTMsY2x1Yj04MDg1LHN0YXJ0PTEyLzIzLzIwMjYsZW5kPTEyLzIzLzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTIz"
+  },
+  {
+   "title": "Pilates",
+   "start": "2026-12-24T09:00",
+   "end": "2026-12-24T10:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9ZTNhNzVjZTZlN2FiNGRkM2JlYTM4YzBhOWE5YTRiYWEsY2x1Yj04MDg1LHN0YXJ0PTEyLzI0LzIwMjYsZW5kPTEyLzI0LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTI0"
+  },
+  {
+   "title": "Pilates",
+   "start": "2026-12-26T09:00",
+   "end": "2026-12-26T10:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MTBkMzUzYTYzMjQ0NGM5MWI5NDhkOTZmODhmYTU0YmEsY2x1Yj04MDg1LHN0YXJ0PTEyLzI2LzIwMjYsZW5kPTEyLzI2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTI2"
+  },
+  {
+   "title": "YOGA.",
+   "start": "2026-12-26T10:00",
+   "end": "2026-12-26T11:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9MGMxMDBlNmYzZjRiNGM0OGI2NjQyZDM5Y2U4MjRkYzEsY2x1Yj04MDg1LHN0YXJ0PTEyLzI2LzIwMjYsZW5kPTEyLzI2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTI2"
+  },
+  {
+   "title": "Yoga90",
+   "start": "2026-12-26T11:00",
+   "end": "2026-12-26T12:00",
+   "book": "https://www.myiclubonline.com/iclub/members/signin#activities/classes?classdata=ZXZlbnRJdGVtSWQ9YmMzNTgzMDMzOWVjNGUzYThjYTAyNzg3OWQ5MGYwM2EsY2x1Yj04MDg1LHN0YXJ0PTEyLzI2LzIwMjYsZW5kPTEyLzI2LzIwMjYsbW9kZT1tb250aCxzZWxlY3RlZERheT0yMDI2LTEyLTI2"
   }
  ]
 }
