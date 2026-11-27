@@ -137,6 +137,11 @@ figure{margin:0}
 .ig-grid img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;transition:transform .4s}
 .ig-grid a:hover img{transform:scale(1.04)}
 @media (max-width:600px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+.gal-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.gal-strip button{display:block;padding:0;border:0;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius);cursor:pointer;background:var(--ph-a)}
+.gal-strip img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.gal-strip button:hover img{transform:scale(1.04)}
+@media (max-width:600px){.gal-strip{grid-template-columns:repeat(3,1fr)}}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem}
 .chips button{font:inherit;font-size:.88rem;padding:.45em 1em;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
 .chips button[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
@@ -479,6 +484,11 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
           <a href="https://www.instagram.com/_izzyinmotion_/" target="_blank" rel="noopener"><img src="img/ig-headstand.webp" alt="Izzy in a headstand on a blanket overlooking the water" loading="lazy" style="object-position:50% 90%"></a>
           <a href="https://www.instagram.com/_izzyinmotion_/" target="_blank" rel="noopener"><img src="img/ig-group.webp" alt="Izzy taking a selfie with friends at the Albany County trailhead" loading="lazy" style="object-position:50% 50%"></a>
         </div>
+      </section>
+
+      <section style="display:grid;gap:1rem">
+        <div class="feed-head"><h2>From the gallery</h2><a href="#gallery">See all photos →</a></div>
+        <div class="gal-strip" id="galStrip"></div>
       </section>
 
       <div class="feed-head"><h2>From the newsletter</h2><a href="#newsletter">All letters →</a></div>
@@ -1006,13 +1016,13 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     <div class="masonry" id="galleryGrid"></div>
     <p class="preview-note" id="galleryNote" style="margin-top:1.2rem"></p>
   </div>
+</section>
   <div class="lightbox" id="lightbox" hidden>
     <button type="button" class="lb-close" id="lbClose" aria-label="Close photo">Close</button>
     <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
     <img id="lbImg" alt="">
     <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">›</button>
   </div>
-</section>
 
 <!-- ================= CONTACT ================= -->
 <section data-view="contact">
@@ -1334,6 +1344,9 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       const im=new Image(); im.src=ph.thumb||ph.src; im.alt=ph.alt||""; im.loading="lazy"; if(ph.w&&ph.h){im.width=ph.w;im.height=ph.h;}
       b.appendChild(im); b.addEventListener("click",()=>openLb(i)); g.appendChild(b); });
     $("#galleryNote").textContent=GALLERY.photos.length+" photos";
+    const st=$("#galStrip"); if(st){ st.innerHTML="";
+      GALLERY.photos.slice(0,6).forEach((ph,i)=>{ const b=el("button"); b.type="button"; b.setAttribute("aria-label","Open photo: "+(ph.alt||"photo "+(i+1)));
+        const im=new Image(); im.src=ph.thumb||ph.src; im.alt=ph.alt||""; im.loading="lazy"; b.appendChild(im); b.addEventListener("click",()=>openLb(i)); st.appendChild(b); }); }
   }
   const lb=$("#lightbox"), lbImg=$("#lbImg");
   function openLb(i){ lbIndex=(i+GALLERY.photos.length)%GALLERY.photos.length; const ph=GALLERY.photos[lbIndex]; lbImg.src=ph.src; lbImg.alt=ph.alt||""; lb.hidden=false; $("#lbClose").focus(); }
@@ -1342,6 +1355,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   $("#lbPrev").addEventListener("click",()=>openLb(lbIndex-1));
   $("#lbNext").addEventListener("click",()=>openLb(lbIndex+1));
   lb.addEventListener("click",e=>{ if(e.target===lb) closeLb(); });
+  window.addEventListener("hashchange",()=>{ if(!lb.hidden) lb.hidden=true; });
   document.addEventListener("keydown",e=>{ if(lb.hidden) return; if(e.key==="Escape") closeLb(); if(e.key==="ArrowLeft") openLb(lbIndex-1); if(e.key==="ArrowRight") openLb(lbIndex+1); });
   renderGallery();
   // ---------- Teams collage: tap to view full screen ----------
