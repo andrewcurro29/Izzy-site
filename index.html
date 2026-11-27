@@ -1076,7 +1076,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   ];
 
   const JOURNAL = [
-    {title:"Welcome to Izzy in Motion", tag:"Live", href:"#welcome", cap:"Morning class", text:"Why I started writing, and the community I hope we build together."},
+    {title:"Welcome to Izzy in Motion", tag:"Live", href:"#welcome", cap:"Morning class", img:"img/smile-green.webp", alt:"Izzy smiling in a Best Fitness shirt", text:"Why I started writing, and the community I hope we build together."},
     {title:"Habits that survive a busy week", tag:"Coming soon", cap:"Meal prep", text:"Small, sustainable routines for training and eating when life gets full."},
     {title:"Capital Region trails worth the drive", tag:"Coming soon", cap:"Trailhead", text:"Running and hiking spots around Albany, from easy loops to big climbs."},
     {title:"Coming back from a knee injury", tag:"Coming soon", cap:"Rehab work", text:"What two ACL rehabs taught me about patience, strength and trusting the process."},
@@ -1212,7 +1212,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   const jc=$("#journalCards");
   JOURNAL.forEach(j=>{
     const live=!!j.href;
-    jc.insertAdjacentHTML("beforeend",'<article class="card"><figure class="ph"><span class="cap">'+esc(j.cap)+'</span></figure><span class="tag'+(live?'':' sample')+'" style="width:fit-content">'+esc(j.tag)+'</span><h3>'+(live?'<a style="color:inherit;text-decoration:none" href="'+j.href+'">'+esc(j.title)+'</a>':esc(j.title))+'</h3><p>'+esc(j.text)+'</p>'+(live?'<a href="'+j.href+'">Read the post →</a>':'')+'</article>');
+    jc.insertAdjacentHTML("beforeend",'<article class="card">'+(j.img?'<figure class="ph photo top"><img src="'+j.img+'" alt="'+esc(j.alt||"")+'" loading="lazy"></figure>':'<figure class="ph"><span class="cap">'+esc(j.cap)+'</span></figure>')+'<span class="tag'+(live?'':' sample')+'" style="width:fit-content">'+esc(j.tag)+'</span><h3>'+(live?'<a style="color:inherit;text-decoration:none" href="'+j.href+'">'+esc(j.title)+'</a>':esc(j.title))+'</h3><p>'+esc(j.text)+'</p>'+(live?'<a href="'+j.href+'">Read the post →</a>':'')+'</article>');
   });
 
   Object.keys(SHOP).forEach(id=>{
