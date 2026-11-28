@@ -284,6 +284,19 @@ legend{font-size:.9rem;font-weight:500;padding:0 .4rem}
 .card{display:grid;gap:.7rem;align-content:start}
 .card .ph{aspect-ratio:4/3;min-height:0}
 .card p{color:var(--muted);font-weight:300;font-size:.97rem}
+.faq-jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.faq-jump a{padding:.45rem .95rem;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:.9rem;background:var(--paper)}
+.faq-jump a:hover{border-color:var(--moss);color:var(--moss)}
+.faq{display:grid;gap:2.4rem}
+.faq>*{max-width:820px}
+.faq-group{scroll-margin-top:90px}
+.faq-group h2{margin:0 0 .6rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 2rem 1rem 0;position:relative;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.2rem;top:.85rem;font-size:1.3rem;font-weight:300;color:var(--moss);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 1.1rem;color:var(--muted);font-weight:300;max-width:68ch}
 .offer{display:grid;gap:.9rem;padding:1.6rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);align-content:start}
 .offer ul{margin:0;padding-left:1.1rem;color:var(--muted);font-weight:300}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
@@ -410,6 +423,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
         <div class="dd-menu"><a href="#classes">Weekly classes</a><a href="#runs">Run club</a><a href="#retreats">Retreats</a></div></div>
       <a href="#newsletter">Newsletter</a>
       <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a class="btn small" href="#newsletter">Subscribe</a>
     </nav>
@@ -1005,6 +1019,48 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section data-view="faq">
+  <div class="wrap page-head">
+    <span class="eyebrow">FAQ</span>
+    <h1>Questions, answered</h1>
+    <p class="lede">The things people ask me most about classes, personal training, nutrition coaching and team sessions.</p>
+    <div class="faq-jump"><a href="#faq" data-scroll="faq-classes">Classes</a><a href="#faq" data-scroll="faq-training">Personal training</a><a href="#faq" data-scroll="faq-nutrition">Nutrition coaching</a><a href="#faq" data-scroll="faq-teams">Team sessions</a></div>
+  </div>
+  <div class="wrap faq" style="padding-bottom:3rem">
+    <div class="faq-group" id="faq-classes"><h2>Classes</h2>
+      <details><summary>Where are your classes?</summary><p>All of my group classes are at Best Fitness, 911 Central Ave, Albany. The <a href="#classes">Classes page</a> shows this week's times, pulled straight from the Best Fitness schedule.</p></details>
+      <details><summary>How do I reserve a spot?</summary><p>Best Fitness members reserve in the Best Fitness app (<a href="https://itunes.apple.com/app/id1551198990?mt=8" target="_blank" rel="noopener">iPhone</a> or <a href="https://play.google.com/store/apps/details?id=com.trainerize.bestfitness" target="_blank" rel="noopener">Android</a>). New to Best Fitness or not sure how it works? <a href="#contact" data-topic="Classes">Message me</a> and I'll help you get booked.</p></details>
+      <details><summary>Do I need to be a Best Fitness member?</summary><p>Classes are run by Best Fitness, so membership and guest questions go through them. If you're thinking about joining, reach out and I'll point you in the right direction.</p></details>
+      <details><summary>Which class should I start with?</summary><p><strong>Body Tone</strong> is full-body strength with light weights and higher reps. <strong>Pilates</strong> is controlled, core-first work. <strong>BFitt:60</strong> is Best Fitness small-group training built for beginners through athletes. If you want to slow down, <strong>Gentle yoga</strong> is a great first class.</p></details>
+      <details><summary>What's the difference between hot yoga and gentle yoga?</summary><p>Hot yoga (Yoga 90) is a warmer, more challenging flow in a 90&deg; room, best for intermediate students. Gentle yoga is slower and supported, great for beginners and older adults.</p></details>
+    </div>
+    <div class="faq-group" id="faq-training"><h2>Personal training</h2>
+      <details><summary>Is personal training with you offered through Best Fitness?</summary><p>Yes. All personal training and programming with me is provided through Best Fitness, 911 Central Ave, Albany. Sessions and packages are booked and paid through Best Fitness.</p></details>
+      <details><summary>How do I get started?</summary><p>It starts with a complimentary 60-minute consult where we talk through your goals, your schedule and any injuries. Next comes a movement check in our first session, then a program built around you. <a href="#training">See how personal training works</a>.</p></details>
+      <details><summary>I'm coming back from an injury. Can you help?</summary><p>That's a big part of what I do. I rebuilt after two ACL and meniscus tears, so I know how much patience a comeback takes. We work on mobility and stability and progress at the pace your body allows.</p></details>
+      <details><summary>Can you help me train for a race?</summary><p>Yes. Whether it's your first 5K or a marathon, we build the strength and durability to get you to race day healthy.</p></details>
+      <details><summary>How much does personal training cost?</summary><p>Pricing and packages are set by Best Fitness. We'll go over the options during your complimentary 60-minute consult.</p></details>
+    </div>
+    <div class="faq-group" id="faq-nutrition"><h2>Nutrition coaching</h2>
+      <details><summary>What does nutrition coaching look like?</summary><p>We start with a complimentary 60-minute intro chat and a few days of simple food notes. From there we pick two or three habits to focus on, then check in regularly to adjust and add the next one. <a href="#nutrition">See how nutrition coaching works</a>.</p></details>
+      <details><summary>Will I have to follow a strict diet?</summary><p>No. There are no crash diets and no foods you're never allowed to eat again. We build simple habits around your training, your work and the foods you actually like.</p></details>
+      <details><summary>Is this the same as seeing a dietitian?</summary><p>No. Nutrition coaching focuses on everyday habits and fueling for performance. It isn't medical nutrition therapy. If you have a medical condition, an eating disorder history or are pregnant, I'm happy to work alongside your doctor or a registered dietitian.</p></details>
+      <details><summary>Is nutrition coaching offered through Best Fitness?</summary><p>Yes. Nutrition coaching with me is provided through Best Fitness, 911 Central Ave, Albany, and it's booked and paid through Best Fitness.</p></details>
+      <details><summary>What is the BLean Challenge?</summary><p>It's Best Fitness's six-week program to learn your nutrition, work with a coach and build habits you keep. <a href="#blean">See how it works</a>, or message me for the next start date.</p></details>
+    </div>
+    <div class="faq-group" id="faq-teams"><h2>Team sessions</h2>
+      <details><summary>Who are team sessions for?</summary><p>High school, college, club and travel teams, and adult leagues. I've worked with UAlbany Women's Soccer and Tamarac Girls Varsity Soccer.</p></details>
+      <details><summary>What can a session include?</summary><p>Recovery yoga, mobility and injury prevention, strength and conditioning stations with a talk on fueling, and HIIT conditioning. We can focus on whatever your team needs most.</p></details>
+      <details><summary>Where do sessions happen?</summary><p>At your facility or at Best Fitness, Central Ave. Let me know what works best when you request a session.</p></details>
+      <details><summary>How long are sessions, and what do they cost?</summary><p>Session length, location and pricing are set through Best Fitness. Ask in the <a href="#teams">team session form</a> and I'll send details.</p></details>
+      <details><summary>How do I book one?</summary><p>Fill out the request form on the <a href="#teams">Team sessions page</a>. Coaches can also DM @bestfitnessclubs "SPORTS". Team sessions are booked and billed through Best Fitness.</p></details>
+    </div>
+    <div class="offer faq-more"><span class="eyebrow">Still wondering?</span><h3>Ask me directly</h3><p style="margin:0;font-weight:300"><a href="#contact">Send me a note</a> or DM me on Instagram at <a href="https://ig.me/m/_izzyinmotion_" target="_blank" rel="noopener">@_izzyinmotion_</a>. I reply personally, usually within two days.</p></div>
+    <p class="note" style="font-size:.82rem;color:var(--muted)">Personal training, programming, nutrition coaching and team sessions with me are offered through Best Fitness, 911 Central Ave, Albany, and are booked and billed through Best Fitness.</p>
+  </div>
+</section>
+
 <!-- ================= GALLERY ================= -->
 <section data-view="gallery">
   <div class="wrap page-head">
@@ -1057,7 +1113,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
       <p style="font-size:.8rem">Content on this site is for general education and isn't medical advice. Check with your doctor before starting a new program.</p>
     </div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Explore</h4>
-      <ul><li><a href="#story">My Story</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+      <ul><li><a href="#story">My Story</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#classes">Classes</a></li><li><a href="#coaching">Coaching</a></li><li><a href="#nutrition">Nutrition</a></li><li><a href="#teams">Team sessions</a></li><li><a href="#retreats">Retreats</a></li><li><a href="#runs">Run Club</a></li><li><a href="#shop">Shop</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     <div><h4 style="font-family:var(--f-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem">Follow</h4>
       <ul class="social-list" id="socialFoot"></ul>
       <p style="margin-top:1rem"><a href="#contact">Contact me →</a></p></div>
@@ -1399,7 +1455,7 @@ footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
     nav.querySelectorAll(".dd").forEach(d=>{ d.classList.remove("open"); d.querySelector(".dd-btn").setAttribute("aria-expanded","false"); d.querySelector(".dd-btn").classList.toggle("here",!!d.querySelector('a[aria-current="page"]')); });
     nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); if(!lb.hidden) lb.hidden=true;
     window.scrollTo(0,0);
-    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",training:"How Personal Training Works · Izzy Bisceglia",blean:"The BLean Challenge · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
+    const titles={home:"Izzy Bisceglia · Performance & Wellness",story:"My Story · Izzy Bisceglia",classes:"Classes · Izzy Bisceglia",coaching:"Coaching · Izzy Bisceglia",nutrition:"Nutrition Coaching · Izzy Bisceglia",training:"How Personal Training Works · Izzy Bisceglia",blean:"The BLean Challenge · Izzy Bisceglia",teams:"Team Sessions · Izzy Bisceglia",retreats:"Retreats · Izzy Bisceglia",runs:"Run Club · Izzy Bisceglia",shop:"Shop · Izzy Bisceglia",gallery:"Gallery · Izzy Bisceglia",newsletter:"Newsletter · Izzy Bisceglia",contact:"Contact · Izzy Bisceglia",faq:"FAQ · Izzy Bisceglia",welcome:"Welcome to Izzy in Motion · Izzy Bisceglia"};
     document.title=titles[n]||"Izzy Bisceglia";
   }
   document.querySelectorAll("[data-topic]").forEach(a=>a.addEventListener("click",()=>{ const sel=document.getElementById("ct-topic"); if(sel) sel.value=a.dataset.topic; }));
